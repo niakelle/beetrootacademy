@@ -1,0 +1,28 @@
+header .logo {
+    position: absolute;
+    width: 187px;
+    height: 32px;
+    top: 22px;
+    left: 143px;
+}
+
+header .logo a {
+    margin-left: 7px;
+}
+
+nav {
+    position: absolute;
+    left: 650px;
+    top: 24px;
+    width: 350px;
+    height: 28px;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #2F281E;
+    height: 28px;
+    font-size: 14px;
+    margin-left: 15px;
+}
