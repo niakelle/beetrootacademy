@@ -1,0 +1,35 @@
+body {
+    max-width: 800px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: #a52a2a;
+    text-align: center;
+}
+
+header h1 {
+    color: #ffffff;
+}
+
+main {
+    font-size: 18px;
+}
+
+.main-images {
+    text-align: center;
+}
+
+.main-images img {
+    border: 3px dashed black;
+}
+
+footer {
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
