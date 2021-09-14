@@ -1,0 +1,97 @@
+body {
+    background-color: #990909;
+    font-size: 18px;
+}
+
+.clearfix::after {
+    display: table;
+    content: "";
+    clear: both;
+} 
+
+header section h1 {
+    text-align: center;
+    letter-spacing: 8px;
+    font-weight: normal;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+header section h1 a {
+    color: white;
+}
+
+header .blackground {
+    background-color: black;
+}
+
+header section nav figure {
+    display: inline-block;
+}
+
+header section nav figure figcaption {
+    color: white;
+}
+
+header a {
+    text-decoration: none;
+}
+
+main section p {
+    color: white;
+}
+
+main .column {
+    float: left;
+}
+
+main .first-column {
+    min-width: 200px;
+    background-color: #7d0909;
+    min-height: 350px;
+}
+
+main .first-column a {
+    display: block;
+    margin-bottom: 25px;
+    color: #e95b11;
+}
+
+main .second-column {
+    max-width: 1400px;
+}
+
+main .third-column {
+    width: 200px;
+    background-color: #e3dddd;
+}
+
+main .third-column h2 {
+    display: block;
+    margin: 0 auto;
+    background-color: #bdbdbd;
+    text-align: center;
+}
+
+main .third-column p {
+    border-top: 1px solid black;
+    color: black;
+    padding: 25px 2px;
+    margin: 0px;
+}
+
+main .third-column p:first-of-type {
+    margin-top: 10px;
+}
+
+body footer {
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #e95b11;
+}
+
+body footer a {
+    text-decoration: none;
+    color: white;
+}
