@@ -9,8 +9,10 @@
 </head>
 <body>
     <header>
-        <section><h1><a href="/">http://www.yourcompany.com</a></h1></section>
-        <section class="blackground"><nav>
+        <!-- section - безполезная обертка -->
+        <section><h1><a href="/">http://www.yourcompany.com</a></h1></section> <!-- Хорошо что сделал текстом и ссылкой - отлично -->
+        <section class="blackground"><nav>         <!-- section - безполезная обертка -->
+            <!-- Етот блок как по мне не относится к Хедеру. Описание картинок не поцентру -->
             <figure><a href="/"><img src="images/img00.jpg" alt="Kitten hissing at a dog"><figcaption>Home</figcaption></a></figure>
             <figure><a href="/"><img src="images/img01.jpg" alt="Butterfly on a flower"><figcaption>About</figcaption></a></figure>
             <figure><a href="/"><img src="images/img02.jpg" alt="Clocks"><figcaption>Services</figcaption></a></figure>
@@ -18,14 +20,20 @@
         </nav></section>
     </header>
     <main class="clearfix">
+        <!-- Блоки выстроялись в правельной  последовательности только потому что у нас разрешение екрана одинаковое ))
+         но если я сделаю разрешение в 1440 - то все ломается, а Если больше - все криво. Поетому подумай как ето можно исправить.
+         Не используя @media(http://htmlbook.ru/css/media)
+        -->
+        <!-- отлично сделал етоти блоки. Ничего лишенего -->
         <section class="first-column column">
+            <!-- неплохое решение, можно было еше воспользоватся ul>li тегами-->
             <a href="#">Point 1 point</a>
             <a href="#">Point 2 point</a>
             <a href="#">Point 3 point</a>
             <a href="#">Point 4 point</a>
             <a href="#">Point 5 point</a>   
         </section>
-        <section class="second-column column">
+        <section class="second-column column"><!-- Хороший подход. Дать 2а класса таким образом разделяя обшие и индивидуальные стили-->
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem officia ratione esse alias corporis doloribus cumque? Possimus, facere porro ea laborum quae eius quasi officiis quam nam itaque enim modi!</p>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur ut quae tempora dignissimos magni, voluptate exercitationem dolores asperiores quaerat vitae a sit sint soluta hic ab. Voluptatem quam ut veniam?</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ipsam quisquam non veniam voluptatibus accusamus eaque praesentium cumque, exercitationem sapiente, qui impedit, sequi molestias! Aliquam ipsa eaque incidunt perferendis sapiente.</p>

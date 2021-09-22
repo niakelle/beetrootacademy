@@ -9,12 +9,21 @@ body {
     clear: both;
 } 
 
+/* Хорошая структура стилей.
+  Когда стилей для какойто секции будет много. То небудет лишним разделять их какимто коментарием
+  по типу "start main/end main"..., header, footer
+*/
+
 header section h1 {
     text-align: center;
     letter-spacing: 8px;
     font-weight: normal;
     border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid white; /* подсказка можно использовать не только одно-тонный цвет, а и градиенты
+    также былобы замечательно тут использовать before/after
+     https://sitist.ru/info-gradient-border.htm
+     https://css-tricks.com/gradient-borders-in-css/
+     */
 }
 
 header section h1 a {
