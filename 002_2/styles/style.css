@@ -6,12 +6,12 @@ header .logo {
     left: 143px;
 }
 
-header .logo a {
+header .logo a { /* Начало хорошшое */
     margin-left: 7px;
 }
 
 nav {
-    position: absolute;
+    position: absolute; /* Пожалуйста внимательно перечитай в каких случая ето используется. */
     left: 650px;
     top: 24px;
     width: 350px;
