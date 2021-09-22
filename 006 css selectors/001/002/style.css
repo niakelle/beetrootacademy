@@ -1,0 +1,18 @@
+*{transition: all .1s ease-in;}
+
+body {
+    font-family:'Courier New', Courier, monospace;
+}
+
+header {
+    color: #EB7E7F;
+    background-color: #4A4F56;
+    text-align: center;
+    padding: 5px 5px;
+}
+
+header p, header h1 {
+    margin: 0;
+}
+
+
