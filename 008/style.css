@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    background-color: #FFFFFF;
+    padding-bottom: 100px;
+}
+
+nav {
+    text-align: center;
+    margin: 0;
+}
+
+nav a {
+    display: inline-block;
+    background-color: #fff;
+    text-decoration: none;
+    padding: 20px 20px;
+    color: #828282;
+}
+
+nav a:first-of-type {
+    color: #070707;
+}
+
+.line {
+    width: 66%;
+}
+
+h1 {
+    display: block;
+    font-size: 3em;
+    margin-left: 16.7%
+}
+
+header img {
+    display: block;
+    margin: 0px auto;
+    width: 66%;
+}
+
+main .second-screen {
+    background-color: #F6F6F6;
+    margin: 0px;
+    padding: 100px 0px;
+}
+
+.ash-two {
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    color: #070707;
+}
+
+main .second-screen .container {
+    width: 480px;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+main .second-screen .container p {
+    margin: 50px 0 0 0;
+    color: #070707;
+}
+
+main .third-screen {
+    background-color: #fff;
+    padding: 100px 0px;
+}
+
+main .third-screen span {
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.card-item {
+    text-align: center;
+}
+
+.cards-list .card-item span {
+    display: block;
+    width: 100px;
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: 1em;
+    text-align: center;
+}
+
+.cards-list .card-item .stars {
+    display: flex;
+}

@@ -33,3 +33,7 @@ footer {
     background-color: black;
     text-align: center;
 }
+
+footer a:visited, footer a {
+    color: #fff;
+}
