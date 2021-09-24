@@ -5,6 +5,8 @@ body {
 }
 
 header {
+    box-sizing: border-box;
+    height: 700px;
     background-color: #FFFFFF;
     padding-bottom: 100px;
 }
@@ -32,17 +34,22 @@ nav a:first-of-type {
 
 h1 {
     display: block;
-    font-size: 3em;
+    font-size: 3.5em;
     margin-left: 16.7%
 }
 
 header img {
+    /* Непонятно, как сделать картинку вровень с хэдэром и 
+    при этом отцентрировать её*/
     display: block;
     margin: 0px auto;
     width: 66%;
+    max-height: 400px;
 }
 
 main .second-screen {
+    box-sizing: border-box;
+    height: 520px;
     background-color: #F6F6F6;
     margin: 0px;
     padding: 100px 0px;
@@ -51,8 +58,9 @@ main .second-screen {
 .ash-two {
     display: block;
     text-align: center;
-    font-size: 2em;
+    font-size: 2.3em;
     color: #070707;
+    margin-top: 0px;
 }
 
 main .second-screen .container {
@@ -68,6 +76,8 @@ main .second-screen .container p {
 }
 
 main .third-screen {
+    box-sizing: border-box;
+    height: 580px;
     background-color: #fff;
     padding: 100px 0px;
 }
@@ -78,18 +88,49 @@ main .third-screen span {
     font-size: 1.2em;
 }
 
-.card-item {
+main .third-screen .cards-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+main .third-screen .cards-list .card-item {
     text-align: center;
+    width: 250px;
+    background-color: #fff;
+    padding: 70px 0 10px 0;
 }
 
 .cards-list .card-item span {
     display: block;
     width: 100px;
+    height: 40px;
     font-family: Gilroy-Bold, sans-serif;
     font-size: 1em;
     text-align: center;
+    background-color: #fff;
+    margin: 1em auto;
 }
 
 .cards-list .card-item .stars {
-    display: flex;
+    background-color: #fff;
+    font-size: 2.5em;
+    margin-top: 40px;
+}
+
+main .fourth-screen {
+    box-sizing: border-box;
+    height: 2240px;
+    background-color: #F6F6F6;
+    padding: 100px 0px;
+}
+
+main .fourth-screen img {
+    display: block;
+    margin: 0px auto;
+}
+
+main .fourth-screen img:nth-of-type(1) {
+    margin-top: 60px;
 }
