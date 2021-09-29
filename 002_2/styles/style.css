@@ -26,7 +26,6 @@ nav .nav-logo {
 nav .nav-logo a span {
     margin-left: 7px;
     color: #173A56;
-    filter: drop-shadow(0px 4px 2px rgba(0,0,0,0.45));
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
     font-size: 2.2em;
@@ -72,6 +71,11 @@ nav .nav-buttons a {
     border-radius: 5%;
 }
 
+/* Ниже находится пример того как НЕ нужно выбирать конкретные элементы.
+Нужно делать это через более специфический селектор, который не сломает вёрстку
+если поменять кнопки(ссылки) местами. Но т.к. сейчас это часть учебного проекта, 
+то в этот раз я использую правило "работает - не трогай" */
+
 nav .nav-buttons a:first-of-type {
     width: 102px;
     height: 46px;
@@ -87,10 +91,100 @@ nav .nav-buttons a:nth-of-type(2) {
 
 header {
     display: flex;
+    justify-content: space-evenly;
     margin-top: 30px;
-    justify-content: space-around;
+    margin-bottom: 110px;
+}
+
+header .header-section-one {
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 header .header-section-one h1 {
     font-size: 3em;
+    line-height: 54px;
+}
+
+header .header-section-one p {
+    font-size: 1.3em;
+}
+
+header .header-section-one .header-button-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 45px;
+    padding: 0;
+}
+
+header .header-section-one .header-button-wrapper .get-started-button {
+    display: block;
+    box-sizing: border-box;
+    width: 175px;
+    height: 53px;
+    padding: 14px 0;
+    background-color: #FF9900;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+header .header-section-one .header-button-wrapper .watch-video-button {
+    display: block;
+    box-sizing: border-box;
+    width: 161px;
+    height: 23px;
+    margin-left: 25px;
+    font-weight: bolder;
+    text-decoration: underline;
+    color: #FF9900;
+}
+
+header .header-section-one .header-button-wrapper .watch-video-button svg {
+    margin-right: 8px;
+    vertical-align:text-top;
+}
+
+header .header-section-two {
+    width: 43%
+}
+
+main .feature h2 {
+    display: block;
+    width: 540px;
+    margin: 0 auto 55px auto;
+    text-align: center;
+    font-size: 2.25em;
+    font-weight: bold;
+}
+
+main .feature .card-list {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+main .feature .card-list .card-item {
+    width: 240px;
+    height: 178px;
+}
+
+main .feature .card-list .card-item:last-of-type {
+    height: 204px;
+}
+
+main .feature .feature-button {
+    display: block;
+    box-sizing: border-box;
+    width: 175px;
+    height: 53px;
+    padding: 14px 0;
+    margin: 0 auto 90px auto;
+    background-color: #FF9900;
+    color: #fff;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
 }
