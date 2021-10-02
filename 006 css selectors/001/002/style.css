@@ -41,6 +41,9 @@ main .checklist .item-checklist {
     padding: 15px 10px;
 }
 
+/*
+Круть ! nth-of-type - рулит... Переделать, полюасу */
+
 .checklist .item-checklist .checkbox-descr {
     font-size: 1.5em;
 }
