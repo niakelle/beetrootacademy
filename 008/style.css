@@ -16,43 +16,63 @@ nav {
     margin: 0;
 }
 
-nav a {
+header nav a { /* а навигация для какой секции или блока ? Забыл добавить header */
     display: inline-block;
     background-color: #fff;
     text-decoration: none;
-    padding: 20px 20px;
+    padding: 20px 20px; /* Кнопки достаточно больши и удобны- Ето супер. Но между ними словами СекторГаза
+     - "Этого не может быть, промежуток должен быть"  Слушать 18+ = https://www.youtube.com/watch?v=h7tz5O20ZMg */
     color: #828282;
 }
 
-nav a:first-of-type {
+nav a:first-of-type { /* Ето все круто но етот стиль 100% должен был быть по наведению */
     color: #070707;
 }
 
-.line {
-    width: 66%;
+.line { /* Глобальный стиль, но такой класс впринципе действительно может использоватся глобально.
+Только в названии нужно маленькое уточнение.  garrison-line. Линий может быть много. */
+    width: 66%; /* Но если Стиль глобальный - то такое ограничение не допустимо,
+     Нужно тогда ограничевать не линию а сам блок-контент */
 }
 
-h1 {
+h1 { /* Глобальный стиль - Другими словами: "Все h1 на всем сайте" */
     display: block;
     font-size: 3.5em;
     margin-left: 16.7%
 }
 
+/*
 header img {
-    /* Непонятно, как сделать картинку вровень с хэдэром и 
-    при этом отцентрировать её*/
+    !* Непонятно, как сделать картинку вровень с хэдэром и
+    при этом отцентрировать её*!
+    !* Ок, Сделаю )) *!
     display: block;
     margin: 0px auto;
     width: 66%;
     max-height: 400px;
 }
+*/
+
+/* Done )) */
+header .header-img {
+    display: block;
+    margin: 0 auto;
+    width: 66%;
+    height: 400px;
+    overflow: hidden;
+}
+header .header-img img {
+    width: 100%;
+}
+
 
 main .second-screen {
     box-sizing: border-box;
-    height: 520px;
+    height: 520px; /* не стоит ограничивать высоту - просто потому что тебе прийдется постоянно высчитывать ее.
+     Контент не займет, больше чем ему нужно */
     background-color: #F6F6F6;
-    margin: 0px;
-    padding: 100px 0px;
+    margin: 0;
+    padding: 100px 0;
 }
 
 .ash-two {
@@ -77,9 +97,9 @@ main .second-screen .container p {
 
 main .third-screen {
     box-sizing: border-box;
-    height: 580px;
+    height: 580px; /* Повторяешься - Чаще пользуйся инспектором*/
     background-color: #fff;
-    padding: 100px 0px;
+    padding: 100px 0;
 }
 
 main .third-screen span {
@@ -99,7 +119,9 @@ main .third-screen .cards-list .card-item {
     text-align: center;
     width: 250px;
     background-color: #fff;
-    padding: 70px 0 10px 0;
+    padding: 70px 0 10px 0; /* Если бы была подсветка при наведении, ето былобы оправданно
+    а так зряяя - у тебя есть общая обертка.
+     */
 }
 
 .cards-list .card-item span {
