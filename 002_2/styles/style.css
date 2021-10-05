@@ -188,3 +188,34 @@ main .feature .feature-button {
     text-transform: uppercase;
     text-align: center;
 }
+
+.second-screen {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.second-screen-wrapper {
+    width: 486px;
+}
+
+.third-screen {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.third-screen-wrapper {
+    width: 486px;
+}
+
+.third-screen .third-screen-wrapper .wrapper-checkbox svg {
+    display: inline-block;
+    vertical-align: center;
+    margin: 0;
+}
+
+.third-screen .third-screen-wrapper .wrapper-checkbox p {
+    display: inline-block;
+    max-width: 445px;
+    margin: 0, 0, 30px, 0;
+    vertical-align: center;
+}
