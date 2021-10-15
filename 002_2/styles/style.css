@@ -226,21 +226,42 @@ main .feature .feature-button {
 }
 
 
+.fourth-screen {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.fourth-screen .fourth-screen-wrapper {
+    width: 486px;
+}
+
 
 footer {
     width: 80%;
-    margin: 0 auto;
+    margin: 145px auto 0 auto;
     border-top: 1px solid rgba(188, 208, 229, 0.49);
 }
 
-footer .footer-logo {
+footer .footer-wrapper {
+    display: flex;
+    height: 210px;
+    margin: 100px 0 85px 0;
+    justify-content: space-between;
+}
+
+footer .footer-wrapper .footer-logo {
+    justify-content: flex-start;
+}
+
+footer .footer-wrapper .footer-logo {
     width: 210px;
     height: 50px;
     padding: 0;
-    margin: 0 0 0 0;
+    margin: 0;
 }
 
-footer .footer-logo a span {
+footer .footer-wrapper .footer-logo a span {
     margin-left: 7px;
     color: #173A56;
     font-family: Arial, Helvetica, sans-serif;
@@ -249,6 +270,56 @@ footer .footer-logo a span {
     letter-spacing: -0.08em;
 }
 
-footer .footer-logo a:visited span {
+footer .footer-wrapper .footer-logo a:visited span {
     color: #173A56;
+}
+
+footer .footer-wrapper .first-column {
+    display: flex;
+    flex-flow: column;
+    width: 118px;
+    height: 205px;
+    justify-content: flex-end;
+}
+
+footer .footer-wrapper .second-column {
+    display: flex;
+    flex-flow: column;
+    width: 131px;
+    height: 205px;
+    justify-content: flex-end;
+}
+
+footer .footer-wrapper div a {
+    display: block;
+    width: 100%;
+    line-height: 35px;
+    color: #544837;
+}
+
+footer .footer-wrapper .footer-signup {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+}
+
+footer .footer-wrapper .footer-signup input {
+    box-sizing: border-box;
+    width: 325px;
+    height: 48px;
+    border-color: #BCD0E5;
+    border-radius: 5px;
+}
+
+footer .footer-wrapper .footer-signup .orange-button {
+    display: block;
+    box-sizing: border-box;
+    width: 131px;
+    height: 39px;
+    margin-top: 20px;
+    padding: 7px 0;
+    background-color: #FF9900;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
 }
