@@ -1,5 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+/*
+- Как для первой работы классы и структура ОЧЕНЬ ХОРОШО прописанна.
+- Сброс стилей Что ето :
+    _reset.scss — как и видно по названию файла, сбрасывает большинство стилей браузера, которые в нем заданы по
+    умолчанию (а такие действительно есть, просто откройте голый HTML).
+
+    _normalize.scss — этот файл не только задает стили по умолчанию там где это необходимо, но и исправляет некоторые
+    недостатки старых браузеров (привет IE).
+
+    Если не использовать ето - то твои стили/верстка будет заточена только под конкретные особенности (под один браузер)
+    чот бы не фиксать баги для каждого браузера по отдельности нужно сбрасывать дефолтные стили
+
+    @info https://github.com/necolas/normalize.css/blob/master/normalize.css
+    @info all = https://developer.mozilla.org/ru/docs/Web/CSS/all
+    @info unset = https://developer.mozilla.org/en-US/docs/Web/CSS/unset
+
+В следуйших работах от тебя хочу видеть
+1) использование препроцессора
+2) структуру вложенности по БЕМ. МОДИФИКАТОР пока НЕ используй - иначе ето сильно тебе усложнит тебе жизнь.
+   стили задавай для блоков и елементов без использования хтмл-тегов
+3) Ето скорей уже моя хотелка - используй переменные для указания цветов
+
+
+Повторю пример с переменными в css :
+:root {
+   @Info
+   1) https://developer.mozilla.org/en-US/docs/Web/CSS/var()
+   2) https://developer.mozilla.org/ru/docs/Web/CSS/Using_CSS_custom_properties
+
+--color-Red: Red;
+--color-Brown: Brown;
+--color-Orange: Orange;
+--color-Yellow: Yellow;
+--color-Lime: Lime;
+--color-Green: Green;
+--color-cadetblue: cadetblue;
+--color-Cyan: Cyan;
+--color-Blue: Blue;
+--color-Pink: Pink;
+--color-Violet: Violet;
+--color-Purple: Purple;
+--color-Indigo: Indigoж
+--color-Black: Black;
+--color-White: White;
+}
+
+
+Повторю Теорию что такое БЕМ :
+БЛОК - ето елемент страници который может быть копирован в любое место страници, без искажения стилей внутри.
+       блоки могут вкладыватся друг в друга.
+ЕЛЕМЕНТ - строго пренадлежит БЛОКу внутри которого он находится. Елемента за блоком быть не может.
+МОДИФИКАТОР - класс который будет изменять повидение ЕЛЕМЕНТов и БЛОКов и неважно где.
+следовательно
+
+СЛЕДОВАТЕЛЬНО нужно строить дерево css классов в HTMLе.
+ К примеру такая структура в HTML :
+краткая запись (сделана для Emmet плагина. Вставить в HTML и нажать ТАБ):
+  ``` .header>.header__logo>.header__icon+.header__title^+.header__menu.menu>.menu__item*4>.menu__icon+.menu__title ```
+развернутая запись : ```
+    <div class="header">
+        <div class="header__logo">
+            <div class="header__icon"></div>
+            <div class="header__title"></div>
+        </div>
+        <div class="header__menu menu">
+            <div class="menu__item">
+                <div class="menu__icon"></div>
+                <div class="menu__title"></div>
+            </div>
+            <div class="menu__item">
+                <div class="menu__icon"></div>
+                <div class="menu__title"></div>
+            </div>
+            <div class="menu__item">
+                <div class="menu__icon"></div>
+                <div class="menu__title"></div>
+            </div>
+            <div class="menu__item">
+                <div class="menu__icon"></div>
+                <div class="menu__title"></div>
+            </div>
+        </div>
+    </div>
+```
+В данном примере:
+header и menu --- Ето Блоки
+menu__item / menu__title / menu__icon --- Елементы блока "menu"
+header__logo / header__icon / header__menu  --- Елементы блока "header"
+МОДИФИКАТОРы - я неприводил в пример, для начала нужно освоить такую структуру.
+
+*/
+
+
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -74,7 +167,9 @@ nav .nav-buttons a {
 /* Ниже находится пример того как НЕ нужно выбирать конкретные элементы.
 Нужно делать это через более специфический селектор, который не сломает вёрстку
 если поменять кнопки(ссылки) местами. Но т.к. сейчас это часть учебного проекта, 
-то в этот раз я использую правило "работает - не трогай" */
+то в этот раз я использую правило "работает - не трогай"
+ - Правильно !!!
+*/
 
 nav .nav-buttons a:first-of-type {
     width: 102px;
