@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+:root {
+    --color-Orange: #FF9900;
+    --color-Black-Font: #173A56;
+}
+
 /*
 - Как для первой работы классы и структура ОЧЕНЬ ХОРОШО прописанна.
 - Сброс стилей Что ето :
@@ -32,18 +37,6 @@
 --color-Red: Red;
 --color-Brown: Brown;
 --color-Orange: Orange;
---color-Yellow: Yellow;
---color-Lime: Lime;
---color-Green: Green;
---color-cadetblue: cadetblue;
---color-Cyan: Cyan;
---color-Blue: Blue;
---color-Pink: Pink;
---color-Violet: Violet;
---color-Purple: Purple;
---color-Indigo: Indigoж
---color-Black: Black;
---color-White: White;
 }
 
 
@@ -118,7 +111,7 @@ nav .nav-logo {
 
 nav .nav-logo a span {
     margin-left: 7px;
-    color: #173A56;
+    color: var(--color-Black-Font);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
     font-size: 2.2em;
@@ -126,7 +119,7 @@ nav .nav-logo a span {
 }
 
 nav .nav-logo a:visited span {
-    color: #173A56;
+    color: var(--color-Black-Font)
 }
 
 nav .nav-links {
@@ -174,13 +167,13 @@ nav .nav-buttons a {
 nav .nav-buttons a:first-of-type {
     width: 102px;
     height: 46px;
-    color: #173A56;
+    color: var(--color-Black-Font)
 }
 
 nav .nav-buttons a:nth-of-type(2) {
     width:110px;
     height: 46px;
-    background-color: #FF9900;
+    background-color: var(--color-Orange);
     color: #fff;
 }
 
@@ -220,7 +213,7 @@ header .header-section-one .header-button-wrapper .get-started-button {
     width: 175px;
     height: 53px;
     padding: 14px 0;
-    background-color: #FF9900;
+    background-color: var(--color-Orange);
     color: #fff;
     font-weight: bold;
     text-align: center;
@@ -234,7 +227,7 @@ header .header-section-one .header-button-wrapper .watch-video-button {
     margin-left: 25px;
     font-weight: bolder;
     text-decoration: underline;
-    color: #FF9900;
+    color: var(--color-Orange);
 }
 
 header .header-section-one .header-button-wrapper .watch-video-button svg {
@@ -277,7 +270,7 @@ main .feature .feature-button {
     height: 53px;
     padding: 14px 0;
     margin: 0 auto 90px auto;
-    background-color: #FF9900;
+    background-color: var(--color-Orange);
     color: #fff;
     font-weight: bolder;
     text-transform: uppercase;
@@ -358,7 +351,7 @@ footer .footer-wrapper .footer-logo {
 
 footer .footer-wrapper .footer-logo a span {
     margin-left: 7px;
-    color: #173A56;
+    color: var(--color-Black-Font);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
     font-size: 2.2em;
@@ -366,7 +359,7 @@ footer .footer-wrapper .footer-logo a span {
 }
 
 footer .footer-wrapper .footer-logo a:visited span {
-    color: #173A56;
+    color: var(--color-Black-Font);
 }
 
 footer .footer-wrapper .first-column {
@@ -413,7 +406,7 @@ footer .footer-wrapper .footer-signup .orange-button {
     height: 39px;
     margin-top: 20px;
     padding: 7px 0;
-    background-color: #FF9900;
+    background-color: var(--color-Orange);
     color: #fff;
     font-weight: bold;
     text-align: center;
