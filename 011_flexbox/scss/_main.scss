@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+@font-face {
+    font-family: 'Miso';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Miso'), url('../fonts/miso.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Miso Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Miso Bold'), url('../fonts/miso-bold.woff') format('woff');
+}
+
+
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 50px 0;
+    background-color: #fdde7e;
+}
+
+.flex-container__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #fff;
+    border: 5px #fff solid;
+    border-radius: 3px;
+}
+
+.card--small {
+    box-sizing: border-box;
+    width: 360px;
+    height: 440px;
+}
+
+.card--big {
+    box-sizing: border-box;
+    width: 360px;
+    height: 500px;
+}
+
+.card__price {
+    font-family: 'Miso Bold';
+    font-size: 70px;
+    color: #02995b;
+}
+
+.card__image {
+    margin-left: 16px;
+}
+
+.card__heading {
+    font-family: 'Miso';
+    font-size: 56px;
+    color: #333;
+}
+
+.card__gray-text {
+    font-family: 'Lato';
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: #333;
+    width: 160px;
+    margin: 0 auto;
+    text-align: center;
+}
