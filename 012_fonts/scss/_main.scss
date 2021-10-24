@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,300&family=Playfair+Display&display=swap');
+
+:root {
+    --Button-color: #eaa258;
+}
+
+.body {
+    padding: 130px 100px;
+    background-color: #f2f2f2;
+}
+
+.book-page {
+    padding: 120px;
+    background-color: #fff;
+} 
+
+.book-page__heading {
+    font-family: "Playfair Display";
+    font-size: 42px;
+    font-weight: 400;
+}
+
+.book-page__first-letter {
+    display: inline-block;
+    font-family: "Playfair Display";
+    font-size: 110px;
+    font-weight: 400;
+}
+.book-page__paragraph {
+    display: inline-block;
+    font-family: "Lato";
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 35.77px;
+}
+
+.book-page__blockquote {
+    font-family: "Lato";
+    font-style: italic;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.book-page__button {
+    box-sizing: border-box;
+    width: 264px;
+    height: 68px;
+    background-color: #fff;
+    border: 2px solid var(--Button-color);
+    color: var(--Button-color);
+    font-family: "Lato";
+    font-weight: 700;
+    font-size: 18px;
+}
