@@ -20,14 +20,19 @@
     font-weight: 400;
 }
 
+.book-page__wrapper {
+    margin-top: 35.77px;
+}
+
 .book-page__first-letter {
-    display: inline-block;
+    float: left;
     font-family: "Playfair Display";
     font-size: 110px;
     font-weight: 400;
+    vertical-align: top;
 }
+
 .book-page__paragraph {
-    display: inline-block;
     font-family: "Lato";
     font-size: 19px;
     font-weight: 300;
