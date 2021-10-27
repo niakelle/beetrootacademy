@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+
+@font-face {
+    font-family: ;
+    src: url();
+}
+
+:root {
+    --purple: #5474fd;
+}
+
+.header {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../img/001_header_background_image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 265px;
+}
+
+.header__page-title {
+    font-family: 'Josefin Sans', sans;
+    font-weight: bold;
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: white;
+}
+
+.header__page-description {
+    font-family: 'Josefin Sans', sans;
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 7px;
+    color: white;
+}
+
+.search-bar {
+
+}
+
+.search-bar__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    height: 60px;
+    background-color: white;
+}
+
+.search-bar__button {
+    box-sizing: border-box;
+    background-color: var(--purple);
+    height: 60px;
+    width: 150px;
+    font-family: 'Aleo';
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+}
+
+.search-bar__icon {
+    fill: white;
+}
+
+.header__scroll-down {
+    position: relative;
+    width: 100px;
+}
+
+.header__scroll-down::after {
+    content:"";
+    top: 15px;
+    left: 50px;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(45deg);
+} 
