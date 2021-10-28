@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -364,6 +365,10 @@ textarea {
   padding: 0.2em 0;
 }
 
+/* @font-face {
+    font-family: ;
+    src: url();
+} */
 :root {
   --purple: #5474fd;
 }
@@ -378,6 +383,9 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -385,7 +393,7 @@ textarea {
   background-image: url(../img/001_header_background_image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 265px;
+  padding-top: 30vh;
 }
 
 .header__page-title {
@@ -406,38 +414,128 @@ textarea {
 }
 
 .search-bar__form {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 650px;
   height: 60px;
   background-color: white;
+  margin-top: 53px;
+}
+.search-bar__form input::-webkit-input-placeholder {
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #999999;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
 }
 
+.search-bar__label {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.search-bar__input-search {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0 116px;
+}
+
+/* Без айдишки не перебивало reset.css почему-то, поэтому пришлось нарушить БЭМ */
+#header-search-bar__input-search {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* ↓ не работает fill для search-bar__icon*/
 .search-bar__button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: var(--purple);
+  height: 60px;
+  width: 150px;
+  font-family: "Aleo";
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  border: 2px solid white;
 }
 
+/* .search-bar__icon {
+
+} */
 .header__scroll-down {
   position: relative;
-  width: 100px;
+  margin-top: 120px;
+  text-decoration: none;
+  color: white;
+  font-family: "Josefin Sans";
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .header__scroll-down::after {
   content: "";
-  top: 15px;
-  left: 50px;
+  top: 20px;
+  left: 47px;
   position: absolute;
-  width: 7px;
-  height: 7px;
-  border-bottom: 2px solid white;
-  border-right: 2px solid white;
+  width: 9px;
+  height: 9px;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+/* .header__nav-bar {
+
+} */
+.nav-bar {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--purple);
+  width: 100%;
+  height: 80px;
+  padding: 0 18.5%;
+}
+
+.nav-bar__logo {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-bar__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.nav-bar__link {
+  text-decoration: none;
+  color: white;
 }

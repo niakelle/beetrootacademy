@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
 
-@font-face {
+/* @font-face {
     font-family: ;
     src: url();
-}
+} */
 
 :root {
     --purple: #5474fd;
@@ -13,12 +13,13 @@
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     height: 100vh;
     background-image: url(../img/001_header_background_image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 265px;
+    padding-top: 30vh;
 }
 
 .header__page-title {
@@ -38,19 +39,43 @@
     color: white;
 }
 
-.search-bar {
-
-}
-
 .search-bar__form {
+    box-sizing: border-box;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 650px;
     height: 60px;
     background-color: white;
+    margin-top: 53px;
+    input::-webkit-input-placeholder {
+        font-size: 14px;
+        letter-spacing: 3px;
+        color: #999999;
+        font-family: "Josefin Sans", sans-serif;
+        text-align: center;
+    }
 }
 
+.search-bar__label {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.search-bar__input-search {
+    width: 100%;
+    height: 100%;
+    border:none;
+    padding: 0 116px;
+}
+
+/* Без айдишки не перебивало reset.css почему-то, поэтому пришлось нарушить БЭМ */
+#header-search-bar__input-search {
+    box-sizing: border-box;
+}
+
+/* ↓ не работает fill для search-bar__icon*/
 .search-bar__button {
     box-sizing: border-box;
     background-color: var(--purple);
@@ -59,26 +84,69 @@
     font-family: 'Aleo';
     font-weight: 400;
     font-size: 14px;
-    color: #fff;
+    color: white;
+    border: 2px solid white;
 }
 
-.search-bar__icon {
-    fill: white;
-}
+/* .search-bar__icon {
+
+} */
 
 .header__scroll-down {
     position: relative;
-    width: 100px;
+    margin-top: 120px;
+    text-decoration: none;
+    color: white;
+    font-family: "Josefin Sans";
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #ffffff;
+    text-align: center;
+
+
+    margin-bottom: 60px;
+
+
 }
 
 .header__scroll-down::after {
     content:"";
-    top: 15px;
-    left: 50px;
+    top: 20px;
+    left: 47px;
     position: absolute;
-    width: 7px;
-    height: 7px;
-    border-bottom: 2px solid white;
-    border-right: 2px solid white;
+    width: 9px;
+    height: 9px;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
     transform: rotate(45deg);
 } 
+
+/* .header__nav-bar {
+    
+} */
+
+.nav-bar {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--purple);
+    width: 100%;
+    height: 80px;
+    padding: 0 18.5%;
+}
+
+.nav-bar__logo {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-bar__links {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.nav-bar__link {
+    text-decoration: none;
+    color: white;
+}
