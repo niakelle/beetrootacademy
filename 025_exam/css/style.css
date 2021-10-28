@@ -445,7 +445,7 @@ textarea {
   width: 650px;
   height: 60px;
   background-color: white;
-  margin-top: 53px;
+  margin-top: 5vh;
 }
 .search-bar__form input::-webkit-input-placeholder {
   font-size: 14px;
@@ -481,10 +481,11 @@ textarea {
           box-sizing: border-box;
   background-color: var(--purple);
   height: 60px;
-  width: 150px;
+  min-width: 150px;
   font-family: "Aleo";
   font-weight: 400;
   font-size: 14px;
+  letter-spacing: 1px;
   color: white;
   border: 2px solid white;
 }
@@ -582,18 +583,28 @@ textarea {
 /* ----------------- FIRST-SCREEN STYLING -------------------*/
 /* ----------------------------------------------------------*/
 .first-screen {
-  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 67vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0 18.5%;
   background-image: url(../img/first-screen/003_first-screen_background-image.jpg);
 }
 
 .first-screen__flex-wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -601,6 +612,7 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 560px;
 }
 
 .first-screen__title {
@@ -611,6 +623,7 @@ textarea {
 }
 
 .first-screen__paragraph {
+  margin-top: 6vh;
   font-family: "Josefin Sans";
   font-weight: 300;
   font-size: 16px;
@@ -624,10 +637,23 @@ textarea {
           box-sizing: border-box;
   width: 225px;
   height: 60px;
+  margin-top: 4.2vh;
   background-image: linear-gradient(45deg, #496bfe 0 40%, #5474fd 40% 100%);
   font-family: "Aleo";
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 1px;
   color: #ffffff;
+}
+
+.first-screen__image-container--second {
+  padding-left: 125px;
+  margin-top: 5px;
+}
+
+/* ----------------------------------------------------------*/
+/* -------------------- ICO-BAR STYLING ---------------------*/
+/* ----------------------------------------------------------*/
+.ico-bar {
+  height: 33vh;
 }
