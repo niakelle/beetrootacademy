@@ -20,7 +20,7 @@
     justify-content: space-between;
     align-items: center;
     height: 100vh;
-    background-image: url(../img/001_header_background_image.jpg);
+    background-image: url(../img/header/001_header_background_image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 30vh;
@@ -185,4 +185,41 @@
 
 .first-screen {
     height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 18.5%;
+    background-image: url(../img/first-screen/003_first-screen_background-image.jpg)
+}
+
+.first-screen__flex-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.first-screen__title {
+    font-family: "Aleo";
+    font-weight: 400;
+    font-size: 36px;
+    color: #ffffff;
+}
+
+.first-screen__paragraph {
+    font-family: "Josefin Sans";
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 26px;
+    color: #e8e8e8;
+}
+
+.first-screen__button {
+    box-sizing: border-box;
+    width: 225px;
+    height: 60px;
+    background-image: linear-gradient(45deg, #496bfe 0 40%, #5474fd 40% 100%);
+    font-family: "Aleo";
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #ffffff;
 }
