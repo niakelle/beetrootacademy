@@ -585,7 +585,7 @@ textarea {
 .first-screen {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 67vh;
+  height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -600,6 +600,8 @@ textarea {
           align-items: center;
   padding: 0 18.5%;
   background-image: url(../img/first-screen/003_first-screen_background-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .first-screen__flex-wrapper {
@@ -654,6 +656,89 @@ textarea {
 /* ----------------------------------------------------------*/
 /* -------------------- ICO-BAR STYLING ---------------------*/
 /* ----------------------------------------------------------*/
-.ico-bar {
-  height: 33vh;
+.second-part-wrapper {
+  background-color: #333;
+  height: 30vh;
+}
+
+.display-zone {
+  margin: 0 auto;
+  max-width: 1250px;
+  min-width: 400px;
+  min-height: 400px;
+  background: #333;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ico-row-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.decor-line {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 60px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-bottom: 115px;
+}
+
+.decor-line::before {
+  content: "";
+  border-top: 1px dashed grey;
+  border-radius: 50%;
+  width: 460px;
+  height: 498px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+}
+
+.ico-block {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+.ico-text {
+  min-width: 212px;
+  font-size: 36px;
+  font-family: "Aleo";
+  color: #e8e8e8;
+  line-height: 0.722;
+  text-align: center;
+}
+
+.ico-pic {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 20px;
 }
