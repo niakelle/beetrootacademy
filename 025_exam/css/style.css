@@ -3,7 +3,7 @@
    v2.0-modified | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aleo&family=Josefin+Sans:wght@300;400;600;700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -373,6 +373,9 @@ textarea {
   --purple: #5474fd;
 }
 
+/* ----------------------------------------------------------*/
+/* --------------------- HEADER STYLING ---------------------*/
+/* ----------------------------------------------------------*/
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -396,6 +399,19 @@ textarea {
   padding-top: 30vh;
 }
 
+.header__flex-group-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .header__page-title {
   font-family: "Josefin Sans", sans;
   font-weight: bold;
@@ -406,8 +422,9 @@ textarea {
 }
 
 .header__page-description {
+  margin-top: 10px;
   font-family: "Josefin Sans", sans;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 22px;
   letter-spacing: 7px;
   color: white;
@@ -477,7 +494,6 @@ textarea {
 } */
 .header__scroll-down {
   position: relative;
-  margin-top: 120px;
   text-decoration: none;
   color: white;
   font-family: "Josefin Sans";
@@ -485,7 +501,6 @@ textarea {
   letter-spacing: 3px;
   color: #ffffff;
   text-align: center;
-  margin-bottom: 60px;
 }
 
 .header__scroll-down::after {
@@ -501,9 +516,9 @@ textarea {
           transform: rotate(45deg);
 }
 
-/* .header__nav-bar {
-
-} */
+/* ----------------------------------------------------------*/
+/* -------------------- NAV-BAR STYLING ---------------------*/
+/* ----------------------------------------------------------*/
 .nav-bar {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -523,7 +538,15 @@ textarea {
 }
 
 .nav-bar__logo {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  padding: 25px 0;
   text-decoration: none;
+  font-family: "Josefin Sans";
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 2px;
   color: white;
 }
 
@@ -535,7 +558,29 @@ textarea {
           box-sizing: border-box;
 }
 
+.nav-bar__link-item {
+  margin-right: 36px;
+}
+
 .nav-bar__link {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  padding: 25px 0;
   text-decoration: none;
+  font-family: "Aleo";
+  font-weight: 400;
+  font-size: 14px;
   color: white;
+}
+
+.nav-bar__link-item:last-of-type {
+  margin-right: 0;
+}
+
+/* ----------------------------------------------------------*/
+/* ----------------- FIRST-SCREEN STYLING -------------------*/
+/* ----------------------------------------------------------*/
+.first-screen {
+  height: 100vh;
 }
