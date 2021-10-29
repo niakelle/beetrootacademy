@@ -346,9 +346,16 @@
     background-image: url(../img/third-screen/001_background-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 44vh;
-    padding-left: 18.5%;
-    padding-bottom: 22vh;
+    padding: 10% 18.5%;
+}
+
+.third-screen__wrapper {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    max-width: 1110px;
+    height: 100%;
 }
 
 .block-spain {
@@ -406,8 +413,16 @@
     background-image: url(../img/fourth-screen/001_background-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 44vh;
-    padding-left: calc(50% + 30px);
+    padding: 10% 18.5%;
+}
+
+.fourth-screen__wrapper {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    max-width: 1110px;
+    height: 100%;
 }
 
 /* ----------------------------------------------------------*/
