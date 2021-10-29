@@ -247,7 +247,6 @@
 
 .second-part-wrapper {
     background-color: #333;
-    height: 30vh;
 }
 
 .display-zone {
@@ -308,4 +307,37 @@
 .ico-pic{
     width: fit-content;
     margin-bottom: 20px;
+}
+
+/* ----------------------------------------------------------*/
+/* ----------------- THIRD-SCREEN STYLING -------------------*/
+/* ----------------------------------------------------------*/
+
+.third-screen {
+    height: 100vh;
+    background-image: url(../img/third-screen/001_background-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ----------------------------------------------------------*/
+/* ----------------- FOURTH-SCREEN STYLING ------------------*/
+/* ----------------------------------------------------------*/
+
+.fourth-screen {
+    height: 100vh;
+    background-image: url(../img/fourth-screen/001_background-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ----------------------------------------------------------*/
+/* ----------------- FIFTH-SCREEN STYLING -------------------*/
+/* ----------------------------------------------------------*/
+
+.fifth-screen {
+    height: 100vh;
+    background-image: url(../img/fifth-screen/001_background-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
