@@ -371,6 +371,7 @@ textarea {
 } */
 :root {
   --purple: #5474fd;
+  --gradient-Button: linear-gradient(45deg, #496bfe 0 40%, #5474fd 40% 100%);
 }
 
 /* ----------------------------------------------------------*/
@@ -746,10 +747,59 @@ textarea {
 /* ----------------- THIRD-SCREEN STYLING -------------------*/
 /* ----------------------------------------------------------*/
 .third-screen {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 100vh;
   background-image: url(../img/third-screen/001_background-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 44vh;
+  padding-left: 18.5%;
+  padding-bottom: 22vh;
+}
+
+.block-spain {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 540px;
+  height: 370px;
+  background-color: rgba(23, 23, 23, 0.9);
+  color: white;
+  padding: 50px 30px;
+}
+
+.block-spain__small-title {
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  font-size: 20px;
+  color: #e8e8e8;
+}
+
+.block-spain__heading {
+  margin-top: 32px;
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.block-spain__paragraph {
+  margin-top: 22px;
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  color: #e8e8e8;
+}
+
+.block-spain__button {
+  margin-top: 45px;
+  background-image: var(--gradient-Button);
+  color: white;
+  width: 225px;
+  padding: 19px 0;
 }
 
 /* ----------------------------------------------------------*/
@@ -760,6 +810,8 @@ textarea {
   background-image: url(../img/fourth-screen/001_background-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 44vh;
+  padding-left: calc(50% + 30px);
 }
 
 /* ----------------------------------------------------------*/
