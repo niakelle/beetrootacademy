@@ -649,11 +649,53 @@ textarea {
   color: #ffffff;
 }
 
-.first-screen__image-container--second {
-  padding-left: 125px;
-  margin-top: 5px;
+.first-screen__grid-wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  max-width: 560px;
+      grid-template-areas: "a a a 0" "1 b b b";
+  gap: 5px;
 }
 
+.first-screen__image-container--first {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: a;
+}
+
+.fifth-screen__grid-wrapper > .first-screen__image-container--first {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+}
+
+.first-screen__image-container--second {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 5;
+  grid-area: b;
+}
+
+.fifth-screen__grid-wrapper > .first-screen__image-container--second {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+}
+
+.first-screen__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* .first-screen__image-container--second {
+    padding-left: 125px;
+    margin-top: 5px;
+}
+ */
 /* ----------------------------------------------------------*/
 /* -------------------- ICO-BAR STYLING ---------------------*/
 /* ----------------------------------------------------------*/
@@ -920,7 +962,7 @@ textarea {
   height: 268px;
   background-color: #232323;
   color: white;
-  padding-bottom: 50px;
+  padding-bottom: 65px;
 }
 
 .footer__logo {
@@ -932,7 +974,7 @@ textarea {
 }
 
 .footer__paragraph {
-  margin-top: 10px;
+  margin-top: 12px;
   font-family: "Josefin Sans";
   font-weight: 300;
   font-size: 16px;
@@ -962,4 +1004,8 @@ textarea {
           box-sizing: border-box;
   width: 18px;
   height: 18px;
+}
+
+.footer__social-item:hover .footer__social-icon-path {
+  fill: var(--purple);
 }

@@ -235,12 +235,36 @@
     color: #ffffff;
 }
 
+.first-screen__grid-wrapper {
+    box-sizing: border-box;
+    display: grid;
+    max-width: 560px;
+    grid-template-areas: 
+    "a a a 0"
+    "1 b b b";
+    gap: 5px;
+}
+
+.first-screen__image-container--first {
+    grid-area: a;
+}
+
 .first-screen__image-container--second {
-    padding-left: 125px;
-    margin-top: 5px;
+    grid-area: b;
+}
+
+.first-screen__image {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 
+/* .first-screen__image-container--second {
+    padding-left: 125px;
+    margin-top: 5px;
+}
+ */
 
 /* ----------------------------------------------------------*/
 /* -------------------- ICO-BAR STYLING ---------------------*/
@@ -467,7 +491,7 @@
     height: 268px;
     background-color: #232323;
     color: white;
-    padding-bottom: 50px;
+    padding-bottom: 65px;
 }
 
 .footer__logo {
@@ -479,7 +503,7 @@
 }
 
 .footer__paragraph {
-    margin-top: 10px;
+    margin-top: 12px;
     font-family: 'Josefin Sans';
     font-weight: 300;
     font-size: 16px;
@@ -501,4 +525,8 @@
     box-sizing: border-box;
     width: 18px;
     height: 18px;
+}
+
+.footer__social-item:hover .footer__social-icon-path {
+    fill: var(--purple);
 }
