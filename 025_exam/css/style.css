@@ -372,6 +372,7 @@ textarea {
 :root {
   --purple: #5474fd;
   --gradient-Button: linear-gradient(45deg, #496bfe 0 40%, #5474fd 40% 100%);
+  --gradient-Button-hover: linear-gradient(0deg, #ffbfbf, #58bcff );
 }
 
 /* ----------------------------------------------------------*/
@@ -467,7 +468,7 @@ textarea {
   width: 100%;
   height: 100%;
   border: none;
-  padding: 0 116px;
+  padding: 0 100px;
 }
 
 /* Без айдишки не перебивало reset.css почему-то, поэтому пришлось нарушить БЭМ */
@@ -491,10 +492,16 @@ textarea {
   border: 2px solid white;
 }
 
-/* .search-bar__icon {
+.search-bar__button:hover {
+  border-color: black;
+}
 
-} */
+.search-bar__icon {
+  display: inline;
+}
+
 .header__scroll-down {
+  display: block;
   position: relative;
   text-decoration: none;
   color: white;
@@ -503,6 +510,11 @@ textarea {
   letter-spacing: 3px;
   color: #ffffff;
   text-align: center;
+}
+
+/* Как сделать фон псевдо-элементу включительно?*/
+.header__scroll-down:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .header__scroll-down::after {
@@ -536,7 +548,7 @@ textarea {
   background-color: var(--purple);
   width: 100%;
   height: 80px;
-  padding: 0 18.5%;
+  padding: 0 calc(18.5% - 18px) 0 18.5%;
 }
 
 .nav-bar__logo {
@@ -561,7 +573,11 @@ textarea {
 }
 
 .nav-bar__link-item {
-  margin-right: 36px;
+  padding: 0 18px;
+}
+
+.nav-bar__link-item:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .nav-bar__link {
@@ -647,6 +663,10 @@ textarea {
   font-size: 16px;
   letter-spacing: 1px;
   color: #ffffff;
+}
+
+.first-screen__button:hover {
+  background-image: var(--gradient-Button-hover);
 }
 
 .first-screen__grid-wrapper {
@@ -859,6 +879,10 @@ textarea {
   color: white;
   width: 225px;
   padding: 19px 0;
+}
+
+.block-spain__button:hover {
+  background-image: var(--gradient-Button-hover);
 }
 
 /* ----------------------------------------------------------*/
