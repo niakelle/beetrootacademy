@@ -9,13 +9,30 @@
     <title>Exam Eduardo</title>
 </head>
 <body>
+<!--
+1) БЕМ структуры толком нету
+2) Отступы по вертикали, все время скачут, не один не попал в приблезительный размер (+-10px).
+3) 100vh - должен был быть только первый скрин
+4) Адаптива - нету
+5)
+-->
 
 <header class="header">
+    <!-- С дизайном все супер....
+     Ну вот могбы четочку подравнять весь блок название и поиска, и былобы идеально
+     Адаптив:
+     - До 1250 еще норм  а потом первой проблемой будет "меню" - Слишком много пустого по бокам.
+   -->
         <div class="header__flex-group-wrapper">
+          <!--  Постарайся не использовать такие названия классов "flex-group-wrapper"
+             1) не удобно.
+             2) непонятно что делает и зачем ета обертка
+          -->
             <h1 class="header__page-title">Bhromaon</h1>
             <p class="header__page-description">Safe Travel Anywhere</p>
             <section class="search-bar header__search-bar">
-            <form class="search-bar__form" action="" class="get">
+            <form class="search-bar__form" action="" class="get"> <!-- два класса -
+             тут или будь внимателен...  или используй нормальную ide которая подсветить такие опечатки -->
                 <label for="header-search-bar__input-search" class="search-bar__label">
                     <input 
                     class="search-bar__input-search" 
@@ -45,6 +62,20 @@
 </header>
 <main class="main">
     <section class="first-screen" id="first-screen">
+        <!--
+        1) одинаковое название у id и класса. Вводит в заблуждение.
+        2) Большая разница с дизайном по отступам сверху и снизу
+        3) flex-wrapper - впринципе - норм. Тут понятно потому что ето просто флексавая обертка без какой либо конкретики
+        Чтобы не создавать такие классы Существуют Flex-библиотеки и называются как "Flex-layout"
+        Вот 2 самых простых. Но есть куда больше.
+        https://github.com/StefanKovac/flex-layout-attribute/
+        https://github.com/Coffcer/flex-layout
+
+        Адаптив :
+        - до 1400 - картинкии еще терпимо смотрятся а потом просто бесполезны. Ничего толко не расмотреть на изображении.
+        - текст-блок даже не дернулся
+        - и снова куча свободного пространства по бокам, в то время как картинки страдают
+        -->
         <div class="first-screen__flex-wrapper">
                 <h2 class="first-screen__title">Why Choose Us</h2>
                 <p class="first-screen__paragraph">Tion and dislike men who are so beguiled and 
@@ -73,6 +104,16 @@
         </div>
     </section>
     <section class="second-part-wrapper">
+        <!--
+        - Слишком большой отступ по вертикали(У).
+        - Слишком большое растояние между иконками
+        - decor-line - слишком далеко от иконки.
+
+
+        Адаптив - ужас :
+        - как только начинаю ужимать - текст сразу на 2 строки делится а ведь место еще куча.
+        - блок не резиновый вообще. Его за 3 свойства можно адаптировать.
+        -->
             <div class="display-zone">
                 <div class="ico-row-flex">
                     <div class="ico-block ico-block--left"> 
@@ -91,6 +132,10 @@
             </div>
     </section>
     <section class="third-screen">
+        <!--
+        тут можно сказать что Адаптив - есть только частичный.
+        картинку на фоне - тоже нужно адаптировать.
+        -->
         <div class="third-screen__wrapper">
             <div class="block-spain">
                 <p class="block-spain__small-title">Spain</p>
@@ -105,7 +150,7 @@
     </section>
     <section class="fourth-screen">
         <div class="fourth-screen__wrapper">
-            <div class="block-spain">
+            <div class="block-spain"><!-- Вот тут ты правильно что использовал теже классы чтобы застилить -->
                 <p class="block-spain__small-title">Spain</p>
                 <h2 class="block-spain__heading">Grand Spain Madrid</h2>
                 <p class="block-spain__paragraph">But I must explain to you how all this mistaken 
@@ -117,6 +162,12 @@
         </div>
     </section>
     <section class="fifth-screen">
+        <!--
+        - нету цитатной-открываюшей кавычки
+        Адаптив :
+        - Картинка пожмакалась
+        - по бокам много пустого.
+        -->
         <h2 class="fifth-screen__heading">What Our Tourist Say</h2>
         <div class="fifth-screen__grid-wrapper">
             <img 
@@ -139,6 +190,7 @@
     </section>
 </main>
 <footer class="footer">
+    <!-- хоть тут все совпало -->
     <h2 class="footer__logo">BHROMAON</h2>
     <p class="footer__paragraph">Safe Travel Anywhere</p>
     <div class="footer__social">

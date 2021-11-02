@@ -1,3 +1,7 @@
+/*
+1) Шрифты отдельным файлом иногда еще и переменные в отдельный файл выносят
+2) Не используется синтаксис препроцессора
+*/
 @import url('https://fonts.googleapis.com/css2?family=Aleo&family=Josefin+Sans:wght@300;400;600;700&display=swap');
 
 /* @font-face {
@@ -382,7 +386,7 @@
 .block-spain {
     box-sizing: border-box;
     width: 540px;
-    height: 370px;
+    height: 370px; /* не задавай высоту блока. при адаптиве создаст проблем. Высоту нужно набирать дочерними елементами */
     background-color: rgba(23,23,23,0.9);
     color: white;
     padding: 50px 30px;
@@ -465,7 +469,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
-    padding: 17.5vh 18.5% 27vh;
+    padding: 17.5vh 18.5% 27vh; /*вот такие размеры в пиксель-перфект задавать противопоказано */
 }
 
 .fifth-screen__heading {
