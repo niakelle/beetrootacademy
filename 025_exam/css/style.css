@@ -415,20 +415,20 @@ textarea {
 }
 
 .header__page-title {
-  font-family: "Josefin Sans", sans;
-  font-weight: bold;
+  font-family: "Josefin Sans";
+  font-weight: 600;
   font-size: 48px;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   color: white;
 }
 
 .header__page-description {
-  margin-top: 10px;
+  margin-top: 8px;
   font-family: "Josefin Sans", sans;
   font-weight: 300;
   font-size: 22px;
-  letter-spacing: 7px;
+  letter-spacing: 6px;
   color: white;
 }
 
@@ -447,13 +447,14 @@ textarea {
   width: 650px;
   height: 60px;
   background-color: white;
-  margin-top: 5vh;
+  margin-top: 45px;
 }
 .search-bar__form input::-webkit-input-placeholder {
   font-size: 14px;
-  letter-spacing: 3px;
-  color: #999999;
-  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 2px;
+  color: #999;
+  font-family: "Josefin Sans";
+  font-weight: 400;
   text-align: center;
 }
 
@@ -477,7 +478,6 @@ textarea {
           box-sizing: border-box;
 }
 
-/* ↓ не работает fill для search-bar__icon*/
 .search-bar__button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -486,8 +486,8 @@ textarea {
   min-width: 150px;
   font-family: "Aleo";
   font-weight: 400;
-  font-size: 14px;
-  letter-spacing: 1px;
+  font-size: 13px;
+  letter-spacing: 2px;
   color: white;
   border: 2px solid white;
 }
@@ -502,11 +502,13 @@ textarea {
 
 .header__scroll-down {
   display: block;
+  margin-bottom: 50px;
   position: relative;
   text-decoration: none;
   color: white;
   font-family: "Josefin Sans";
-  font-size: 14px;
+  font-weight: 300;
+  font-size: 13px;
   letter-spacing: 3px;
   color: #ffffff;
   text-align: center;
@@ -520,10 +522,10 @@ textarea {
 .header__scroll-down::after {
   content: "";
   top: 20px;
-  left: 47px;
+  left: 43px;
   position: absolute;
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   border-bottom: 1px solid white;
   border-right: 1px solid white;
   -webkit-transform: rotate(45deg);
