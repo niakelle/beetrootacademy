@@ -801,7 +801,7 @@ textarea {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 540px;
-  height: 370px;
+  /*    height: 370px; */
   background-color: rgba(23, 23, 23, 0.9);
   color: white;
   padding: 50px 30px;
@@ -830,7 +830,7 @@ textarea {
   color: #e8e8e8;
 }
 .block-spain__button {
-  margin-top: 45px;
+  margin-top: 38px;
   background-image: var(--gradient-Button);
   color: white;
   width: 225px;
