@@ -192,7 +192,7 @@
 
 .first-screen {
     box-sizing: border-box;
-    height: 70vh;
+    height: 690px;
     display: flex;
     flex: 1 1;
     justify-content: space-between;
@@ -206,7 +206,9 @@
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        max-width: 560px;
+        max-width: 540px;
+        flex: 1 1;
+        justify-self: flex-start;
     }
 
     &__title {
@@ -246,11 +248,14 @@
     &__grid-wrapper {
         box-sizing: border-box;
         display: grid;
-        max-width: 560px;
+        max-width: 476px;
+        max-height: 445px;
         grid-template-areas: 
         "a a a 0"
         "1 b b b";
         gap: 5px;
+        flex: 1 1;
+        margin-left: 100px;
     }
 
     &__image-container--first {
@@ -279,11 +284,11 @@
 }
 
 .display-zone {
-/*     box-sizing: border-box; */
+    box-sizing: border-box;
     margin: 0 auto;
     max-width: 1250px;
     min-width: 400px;
-    min-height: 400px;
+    min-height: 300px;
     background: #333;
     padding: 50px;
     display: flex;
@@ -291,6 +296,7 @@
 }
 
 .ico-row-flex {
+    width: 100%;
     display: flex;
     height: fit-content;
 }
@@ -298,7 +304,7 @@
 .decor-line {
     position: relative;
     overflow: hidden;
-    width: 300px;
+    width: 250px;
     height: 60px;
     align-self:flex-start;
     padding-bottom: 115px;
@@ -458,22 +464,26 @@
     &__grid-wrapper {
         box-sizing: border-box;
         display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas:
         "a a b b b";
         max-width: 1120px;
-        max-height: 285px;
+/*         min-height: 285px; */
         margin: 0 auto;
     }
 
     &__grid-item--first {
-        grid-area: "a";
+        grid-area: a;
         width: 100%;
         height: 100%;
+        object-fit: cover;
+        object-position:center;
     }
+
 
     &__grid-item--second {
         box-sizing: border-box;
-        grid-area: "b";
+        grid-area: b;
         padding: 50px 55px 50px 60px;
         background-color: #333;
     }
