@@ -99,24 +99,62 @@ threenumberButton.onclick = function () {
     let threenumberResult = document.querySelector('.threenumberResult');
     let resultFunction;
 
-    let number = inputValue + '';
+    let number = inputValue;
 
-    if (number[0] == number[1] || number[0] == number[2] || number[1] == number [2]) {
+    if (inputValue >= 100 && inputValue <= 999) {
+        if (number[0] == number[1] || number[0] == number[2] || number[1] == number [2]) {
         resultFunction = 'В введённом числе есть одинаковые цифры';
-    } else {
-       resultFunction = 'В введённом числе нет одинаковых цифр';
+        } else {
+        resultFunction = 'В введённом числе нет одинаковых цифр';
+        }
+    }
+
+    else {
+        resultFunction = 'Введённое значение некорректно. Введите трёхзначное число.';
     }
 
     console.log(resultFunction);
     threenumberResult.innerHTML = resultFunction;
 }
 
-/* 
-354 
+let leapyearButton = document.getElementById('leapyearButton');
 
-354 / 10 = 35 (4);
-35 / 10 = 3 (5);
-3 / 10 = 0 (3); 
+leapyearButton.onclick = function () {
+    let inputValue = document.getElementById('leapyear').value;
+    let leapyearResult = document.querySelector('.leapyearResult');
+    let resultFunction;
 
+    if (inputValue % 400 === 0 || inputValue % 4 === 0 && inputValue % 100 !== 0) {
+        resultFunction = 'Вы ввели ' + inputValue + ' год, этот год високосный.';
+    }
+    else {
+        resultFunction = 'Вы ввели ' + inputValue + ' год, этот год НЕ високосный.';
+    }
 
-*/
+    console.log(resultFunction);
+    leapyearResult.innerHTML = resultFunction;
+}
+
+let palindromButton = document.getElementById('palindromButton');
+
+palindromButton.onclick = function () {
+    let inputValue = document.getElementById('palindrom').value;
+    let palindromResult = document.querySelector('.palindromResult');
+    let resultFunction;
+
+    inputValue += '';
+    let paliCalc = '';
+    
+    for (let i = 4; i >= 0; i--) {
+        paliCalc += inputValue[i];
+    }
+    if (paliCalc === inputValue) {
+        resultFunction = 'Ваше число ' + paliCalc + ' является палиндромом.';
+    }
+    else {
+        resultFunction = 'Ваше число ' + inputValue + ' НЕ является палиндромом.';
+    }
+
+    console.log(resultFunction);
+    palindromResult.innerHTML = resultFunction;
+}

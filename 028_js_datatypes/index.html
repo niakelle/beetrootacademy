@@ -13,20 +13,36 @@
     <h1 class="heading">Задания по JS!</h1>
 
     <form action="" class="form">
+        <hr>
+        <h2>Кто вы по возрасту?</h2>
         <label for="inputValue">Введите ваш возраст:</label>
         <input type="number" name="" id="inputValue" value="0">
         <button id="buttonJS" type="button">Calculate</button>
         <p class="result">Здесь выведется результат.</p>
         <hr>
+        <h2>Какой спецсимвол соответствует цифре на клавиатуре?</h2>
         <label for="specsymbol">Введите цифру от 0 до 9:</label>
-        <input type="number" name="" id="specsymbol">
+        <input type="number" name="" id="specsymbol" step="1" min="0" max="9">
         <button id="specsymbolButton" type="button">Calculate</button>
         <p class="specsymbolResult">Здесь выведется результат.</p>
         <hr>
+        <h2>Есть ли одинаковые цифры в трёхзначном числе?</h2>
         <label for="threenumber">Введите трёхзначное число:</label>
-        <input type="number" name="" id="threenumber">
+        <input type="number" name="" id="threenumber" step="1" min="100" max="999">
         <button id="threenumberButton" type="button">Calculate</button>
         <p class="threenumberResult">Здесь выведется результат.</p>
+        <hr>
+        <h2>Високосный год или нет?</h2>
+        <label for="leapyear">Введите год:</label>
+        <input type="number" name="" id="leapyear" step="1" min="0" max="999999">
+        <button id="leapyearButton" type="button">Calculate</button>
+        <p class="leapyearResult">Здесь выведется результат.</p>
+        <hr>
+        <h2>Палиндром или нет?</h2>
+        <label for="palindrom">Введите пятиразрядное число:</label>
+        <input type="number" name="" id="palindrom" step="1" min="10000" max="99999">
+        <button id="palindromButton" type="button">Calculate</button>
+        <p class="palindromResult">Здесь выведется результат.</p>
         <hr>
     </form>
 
