@@ -107,9 +107,7 @@ threenumberButton.onclick = function () {
         } else {
         resultFunction = 'В введённом числе нет одинаковых цифр';
         }
-    }
-
-    else {
+    } else {
         resultFunction = 'Введённое значение некорректно. Введите трёхзначное число.';
     }
 

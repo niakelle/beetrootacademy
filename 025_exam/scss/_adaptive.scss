@@ -1,0 +1,74 @@
+@media screen and (max-width: 1200px){
+    .nav-bar, .first-screen {
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+
+    .first-screen {
+        
+        
+        &__grid-wrapper {
+            margin-left: 75px;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .nav-bar, .first-screen {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .first-screen {
+        
+        
+        &__grid-wrapper {
+            margin-left: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .header {
+        //БУРГЕР!!!!!!!
+
+    }
+
+    .search-bar {
+
+
+        &__form {
+            box-sizing: border-box;
+            max-width: 500px;
+        }
+
+        &__input-search {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    .nav-bar {
+
+
+        &__links {
+            display: none;
+        }
+    }
+
+    .first-screen {
+
+
+        &__grid-wrapper {
+
+            margin-left: 20px;
+            grid-template-areas: 
+            "a a a"
+            "b b b";
+        }
+    }
+
+    .second-part-wrapper {
+        display: none;
+    }
+}
