@@ -165,3 +165,84 @@ document.querySelector('.unhideButton').onclick = function () {
 }
 
 // task 7 - сдвинуть цифры числа на значение
+document.querySelector('.translateButton').onclick = function () {
+    let paragraph = document.querySelector('.translateOutput');
+
+    let inputOne = document.getElementById('translateOne').value;
+    let inputTwo = parseInt(document.getElementById('translateTwo').value);
+    let result = '';
+    let resultOutput;
+
+    for (let i = 0; i < inputOne.length; i++) {
+        let j = i - inputTwo;
+
+        if (j < 0) {
+            j += inputOne.length;
+        }
+        result += inputOne[j];
+    }
+
+    resultOutput = 'Число со сдвинутыми цифрами ' + result +'.';
+
+    console.log(resultOutput);
+    paragraph.innerHTML = resultOutput;
+}
+
+// task 8 - Следующий день недели
+let calcEight = 1;
+document.querySelector('.eight-button').onclick = function () {
+    let paragraph = document.querySelector('.eight-output');
+    let result = '';
+    let resultOutput;
+
+    if (calcEight > 7) {
+        calcEight -= 7;
+    }
+    switch (calcEight) {
+        case 2:
+            result = 'вторник';
+            calcEight++;
+        break;
+        case 3:
+            result = 'среда';
+            calcEight++;
+        break;
+        case 4:
+            result = 'четверг';
+            calcEight++;
+        break;
+        case 5:
+            result = 'пятница';
+            calcEight++;
+        break;
+        case 6:
+            result = 'суббота';
+            calcEight++;
+        break;
+        case 7:
+            result = 'воскресенье';
+            calcEight++;
+        break;
+        case 1:
+            result = 'понедельник';
+            calcEight++;
+        break;
+    }
+   
+
+    resultOutput = 'День недели ' + result + '.';
+
+    console.log(resultOutput);
+    paragraph.innerHTML = resultOutput;
+    document.querySelector('.eight-button').innerHTML = 'Узнать день после этого';
+}
+document.querySelector('.eight-button-hide').onclick = function () {
+    document.querySelector('.eight-div-hide').classList.add('display-none');
+    document.querySelector('.eight-div-unhide').classList.remove('display-none');
+}
+document.querySelector('.eight-button-unhide').onclick = function () {
+    document.querySelector('.eight-div-hide').classList.remove('display-none');
+    document.querySelector('.eight-div-unhide').classList.add('display-none');
+}
+
+// task 9 - вывести таблицу умножения чисел от 2 до 9
