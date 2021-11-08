@@ -246,3 +246,58 @@ document.querySelector('.eight-button-unhide').onclick = function () {
 }
 
 // task 9 - вывести таблицу умножения чисел от 2 до 9
+document.querySelector('.umnozhButton').onclick = function () {
+    let paragraph = document.querySelector('.umnozhOutput');
+
+    let result = [];
+    let resultOutput = '';
+
+    for (let i = 2; i <= 9; i++) {
+        for (let j = 1; j <= 10; j++) {
+            result.push(i * j);
+        }
+        result.push('<br>');
+    }
+
+    console.log('mass = ' + result);
+
+    for (let i = 0; i < result.length; i++) {
+        resultOutput = resultOutput + result[i] + ' ';
+    }
+
+    console.log(resultOutput);
+    paragraph.innerHTML = resultOutput;
+}
+
+// task 10 - угадай число
+document.querySelector('.tenthButton').onclick = function () {
+    let paragraph = document.querySelector('.tenthOutput');
+
+    let resultOutput;
+    let min = 0;
+    let max = 100;
+    let result = max / 2;
+    let isContinue = confirm('Ваше число равно ' + result + '?');
+
+
+function guessing () {
+    if (!isContinue) {
+    result = Math.floor((min + max) / 2);
+    let isMore = confirm('Ваше число больше ' + result + '?');
+    if (isMore) {
+        min = result;
+    } else {
+        max = result;
+    }
+    } 
+}
+
+    do {
+        guessing();
+        console.log('min = ' + min + '; max = ' + max);
+        isContinue;
+    } while (!isContinue);
+
+    console.log(resultOutput);
+    paragraph.innerHTML = resultOutput;
+}
