@@ -277,27 +277,31 @@ document.querySelector('.tenthButton').onclick = function () {
     let min = 0;
     let max = 100;
     let result = max / 2;
-    let isContinue = confirm('Ваше число равно ' + result + '?');
-
+    
 
 function guessing () {
-    if (!isContinue) {
-    result = Math.floor((min + max) / 2);
     let isMore = confirm('Ваше число больше ' + result + '?');
     if (isMore) {
         min = result;
     } else {
         max = result;
     }
-    } 
-}
+    result = Math.floor((min + max) / 2);
+} 
 
-    do {
-        guessing();
-        console.log('min = ' + min + '; max = ' + max);
-        isContinue;
-    } while (!isContinue);
 
-    console.log(resultOutput);
-    paragraph.innerHTML = resultOutput;
+let isContinue = confirm('Ваше число равно ' + result + '?');
+
+
+do {
+    console.log('min = ' + min + '; max = ' + max + '; result = ' + result);
+    if (isContinue) {
+        break;
+    }
+    guessing();
+    isContinue = confirm('Ваше число равно ' + result + '?');
+} while (!isContinue);
+
+console.log(resultOutput);
+paragraph.innerHTML = resultOutput;
 }
