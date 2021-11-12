@@ -82,10 +82,9 @@ document.querySelector('.fourth-task__button').onclick = function () {
 // task 5 - Совершенное число
 document.querySelector('.fifth-task__button').onclick = function () {
     let aa = parseInt(prompt('Введите число для проверки'));
-    let result = 0;
-    let resultOutput;
-    console.log(aa);
+
     let perfectNumber = function (a) {
+        let result = 0;
         for (i = 1; i < a; i++) {
             if (a % i === 0) {
                 result += i;
@@ -101,3 +100,72 @@ document.querySelector('.fifth-task__button').onclick = function () {
     console.log(perfectNumber(aa));
     document.querySelector('.fifth-task__result-output').innerHTML = perfectNumber(aa);
 }
+
+// task 6 - совершенные числа в диапазоне
+document.querySelector('.sixth-task__button').onclick = function () {
+    let aa = parseInt(prompt('Введите первое число диапазона'));
+    let ab = parseInt(prompt('Введите второе число диапазона'));
+
+    let perfectNumber = function (a) {
+        let result = 0;
+        for (i = 1; i < a; i++) {
+            if (a % i === 0) {
+                result += i;
+            }
+        }
+        if (result === a) {
+            return 'Число ' + a + ' является совершенным.';
+        } 
+    }
+
+    let findDiapazonPerfect = function (a,b) {
+        for (let i = a; i <= b; i++) {
+            if (perfectNumber(i) !== undefined) {
+                console.log(perfectNumber(i));
+                document.querySelector('.sixth-task__result-output').innerHTML += perfectNumber(i) + '<br>';
+            }
+        }
+    };
+    findDiapazonPerfect(aa,ab);
+}
+
+// task 7 - вывод введённого времени
+document.querySelector('.seventh-task__button').onclick = function () {
+    let aa = prompt('Введите часы');
+    let ab = prompt('Введите минуты');
+    let ac = prompt('Введите секунды');
+
+    let showTime = function (a,b,c) {
+        let calcResult = '';
+        calcResult += a + ':';
+        if (b === '') {
+            calcResult += '00' + ':';
+        } else {calcResult += b + ':';}
+        if (c === '') {
+            calcResult += '00';
+        } else {calcResult += c;}
+        return calcResult;
+    };
+
+    console.log('Вы ввели время ' + showTime(aa,ab,ac) + '.');
+    document.querySelector('.seventh-task__result-output').innerHTML = 'Вы ввели время ' + showTime(aa,ab,ac) + '.';
+}
+
+// task 8 - перевод времени в секунды
+document.querySelector('.eight-task__button').onclick = function () {
+    let aa = prompt('Введите часы');
+    let ab = prompt('Введите минуты');
+    let ac = prompt('Введите секунды');
+
+    let calcSeconds = function (a,b,c) {
+        let calcResult = ((parseInt(a) * 60) + parseInt(b)) * 60 + parseInt(c);
+
+        return calcResult;
+    }
+
+    let resultOutput = 'Введенное вами время в секундах равняется ' + calcSeconds(aa,ab,ac) + '.';
+    console.log(resultOutput);
+    document.querySelector('.eight-task__result-output').innerHTML = resultOutput;
+}
+
+// task 9 - перевод секунд в часы и вывод в формате чч:мм:сс
