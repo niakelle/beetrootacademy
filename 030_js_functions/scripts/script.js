@@ -169,3 +169,59 @@ document.querySelector('.eight-task__button').onclick = function () {
 }
 
 // task 9 - перевод секунд в часы и вывод в формате чч:мм:сс
+document.querySelector('.ninth-task__button').onclick = function () {
+    let aa = parseInt(prompt('Введите секунды'));
+
+    let calcHrsMinSec = function (a) {
+    let seconds = a;
+    let minutes;
+    let hours;
+
+    minutes = Math.floor(seconds / 60);
+    seconds = seconds % 60;
+    hours = Math.floor(minutes / 60);
+    minutes = minutes % 60;
+
+    let massiv = [];
+    massiv.push(hours);     massiv.push(minutes);     massiv.push(seconds);
+    return massiv;
+}
+
+    let displayHrsMinSec = function (a) {
+        let result = '';
+        let dvoetochie;
+        for (let i = 0; i < a.length; i++) {
+            // проверка не является ли значение массива последним
+            if (i !== (a.length - 1)) {
+                dvoetochie = ':';
+
+                // проверка состоит число из двух цифр или нет
+                if (a[i] < 10) {
+                    // если состоит из одной цифры то перед значением вставляем 0
+                    result = result + '0' + a[i] + dvoetochie;
+                } else {
+                    // если из двух цифр то 0 не вставляем 
+                    // (число и так подходит под формат чч:мм:сс)
+                    result = result + a[i] + dvoetochie;
+                }
+            } else {
+                dvoetochie = '';
+                // всё то же что и в if ↑↑↑
+                if (a[i] < 10) {
+                    // если состоит из одной цифры то перед значением вставляем 0
+                    result = result + '0' + a[i] + dvoetochie;
+                } else {
+                    // если из двух цифр то 0 не вставляем 
+                    // (число и так подходит под формат чч:мм:сс)
+                    result = result + a[i] + dvoetochie;
+                }
+            }
+        }
+        // выходим из цикла for
+        return result;
+    }
+    console.log('Конвертированное время = ' + displayHrsMinSec(calcHrsMinSec(aa)));
+    document.querySelector('.ninth-task__result-output').innerHTML = 'Конвертированное время = ' + displayHrsMinSec(calcHrsMinSec(aa));
+}
+
+// task 10 - написать функцию которая высчитывает разницу между датами
