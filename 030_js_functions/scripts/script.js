@@ -85,20 +85,21 @@ document.querySelector('.fifth-task__button').onclick = function () {
 
     let perfectNumber = function (a) {
         let result = 0;
-        for (i = 1; i < a; i++) {
+        for (let i = 1; i < a; i++) {
             if (a % i === 0) {
                 result += i;
             }
         }
         if (result === a) {
-            return 'Введенное число ' + a + ' является совершенным.';
+            return `Введенное число ${a} является совершенным.`;
         } else {
-            return 'Введенное число ' + a + ' НЕ является совершенным.';
+            return `Введенное число ${a} НЕ является совершенным.`;
         }
-    }
+    };
 
-    console.log(perfectNumber(aa));
-    document.querySelector('.fifth-task__result-output').innerHTML = perfectNumber(aa);
+    let resultOutput = perfectNumber(aa);
+    console.log(resultOutput);
+    document.querySelector('.fifth-task__result-output').innerHTML = resultOutput;
 }
 
 // task 6 - совершенные числа в диапазоне
