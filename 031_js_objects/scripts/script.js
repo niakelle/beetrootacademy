@@ -152,10 +152,8 @@ drobi.sokrashenie = function () {
     let resultZnam = this.znamOne; 
     let startChis = this.chisOne;
     let startZnam = this.znamOne; 
-
-    console.log(startChis);
-
     let obshiyDelitel;
+
     if (startChis < startZnam || startChis === startZnam) {
         for (let i = 1; i <= startChis; i++) {
             if (startChis % i === 0 && startZnam % i === 0) {
@@ -169,11 +167,9 @@ drobi.sokrashenie = function () {
             }
         }
     }
-    console.log(obshiyDelitel);
 
     resultChis = startChis / obshiyDelitel;
     resultZnam = startZnam / obshiyDelitel;
-
 
     this.resultSokrashenie = {};
     this.resultSokrashenie.chis = resultChis;
@@ -187,3 +183,93 @@ document.querySelector('.second-task__button-sokrat').onclick = function () {
     document.querySelector('.second-task__output-sokrat').innerHTML = resultOutput;
 };
 
+/* 
+Створити об'єкт, що описує час (години, хвилини, секунди), і такі функції для 
+роботи з цим об'єктом:
+Для виведення часу на екран.
+Зміни часу на передане кількість секунд.
+Зміни часу на передане кількість хвилин.
+Зміни часу на передане кількість годин.
+Врахуйте, що в останніх 3-х функціях, при зміні однієї частини часу, може 
+змінитися і інша. 
+Наприклад: якщо до часу «20:59:45» додати 30 секунд, то повинно вийти «21:00:15», 
+а не «20:30:75». 
+Також потрібно передбачити можливість того що користувач може передати 150 секунд, 
+або 75 хвилин.
+*/
+
+let time = {};
+
+// при нажатии кнопки пользователь вводит в промпты секунды, минуты и часы
+document.querySelector('.third-task__button').onclick = function () {
+    let seconds = parseInt(prompt('Введите количество секунд.'));
+    let minutes = parseInt(prompt('Введите количество минут.'));
+    let hours = parseInt(prompt('Введите количество часов.'));
+    
+    time.seconds = seconds;
+    time.minutes = minutes;
+    time.hours = hours;
+}
+
+// функция для вывода времени из объекта в правильном формате чч:мм:сс
+time.displayTime = function (a,b,c) {
+    let calcResult = '';
+
+    // если число состоит из одной цифры, то перед числом дописать 0
+    // (считаем, что пользователь умный и не будет вводить отъёмные значения)
+    if (a < 10) {
+        calcResult += '0' + a + ':';
+    } else {
+        calcResult += a + ':';
+    }
+
+    // если количество минут не передано, то пишем '00'
+    // в else проверка если число состоит из одной цифры, то перед числом дописать 0
+    if (b === '') {
+        calcResult += '00' + ':';
+    } else {
+        if (b < 10) {
+            calcResult += '0' + b + ':';
+        } else {
+            calcResult += b + ':';
+        }
+    }
+
+    if (c === '') {
+        calcResult += '00';
+    } else { 
+        if (c < 10) {
+            calcResult += '0' + c;
+        } else { 
+            calcResult += c;
+        }
+    }
+    return calcResult;
+};
+// display time привязываю к button на странице html
+document.querySelector('.third-task__button-display').onclick = function () {
+    let storedFunction = time.displayTime(time.hours, time.minutes, time.seconds);
+    console.log(storedFunction);
+    document.querySelector('.third-task__output-display').innerHTML = storedFunction;
+}
+
+// пишу функцию для добавления какого-то количества секунд к текущему
+time.changeSeconds = function (inputSeconds) {
+    // переменные для секунд, минут и часов (отдельно)
+    let input = inputSeconds;
+    let seconds = time.seconds;
+    let minutes = time.minutes;
+    let hours = time.hours;
+
+    // Переписать (не работает)
+    hours += Math.floor(Math.floor(input / 60) / 60);
+    minutes += Math.floor(input / 60) + (Math.floor(input / 60) % 60);
+    seconds += input % 60;
+}
+
+document.querySelector('.third-task__button-changeSeconds').onclick = function () {
+    let inputSeconds = parseInt(prompt('Сколько секунд прибавить?'));
+    let storedFunction = time.changeSeconds(inputSeconds);
+    console.log(storedFunction);
+    document.querySelector('.third-task__output-changeSeconds').innerHTML = storedFunction;
+}
