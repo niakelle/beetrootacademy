@@ -152,30 +152,33 @@ drobi.sokrashenie = function () {
     let resultZnam = this.znamOne; 
     let startChis = this.chisOne;
     let startZnam = this.znamOne; 
+
+    console.log(startChis);
+
     let obshiyDelitel;
     if (startChis < startZnam || startChis === startZnam) {
-        for (let i = 1; i <= startZnam; i++) {
-            if (startChis % i === 0 && startZnam === 0) {
+        for (let i = 1; i <= startChis; i++) {
+            if (startChis % i === 0 && startZnam % i === 0) {
                 obshiyDelitel = i;
             }
         }
     } else {
-        for (let i = 0; i <= startChis; i++) {
-            if (startChis % i === 0 && startZnam === 0) {
+        for (let i = 0; i <= startZnam; i++) {
+            if (startChis % i === 0 && startZnam % i === 0) {
                 obshiyDelitel = i;
             }
         }
     }
+    console.log(obshiyDelitel);
+
     resultChis = startChis / obshiyDelitel;
     resultZnam = startZnam / obshiyDelitel;
-    console.log(resultChis);
-    console.log(resultZnam);
 
 
     this.resultSokrashenie = {};
     this.resultSokrashenie.chis = resultChis;
     this.resultSokrashenie.znam = resultZnam;
-    return `Результат сокращения дробей: ${this.resultSokrashenie.chis}/${this.resultSokrashenie.znam} .`;
+    return `Результат сокращения дроби: ${this.resultSokrashenie.chis}/${this.resultSokrashenie.znam}.`;
 }
 // привязываю функцию сокращения к кнопке и делаю вывод в консоль и HTML
 document.querySelector('.second-task__button-sokrat').onclick = function () {
@@ -184,4 +187,3 @@ document.querySelector('.second-task__button-sokrat').onclick = function () {
     document.querySelector('.second-task__output-sokrat').innerHTML = resultOutput;
 };
 
-// НЕ РАБОТАЕТ СОКРАЩЕНИЕ NaN

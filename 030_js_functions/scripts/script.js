@@ -171,58 +171,65 @@ document.querySelector('.eight-task__button').onclick = function () {
 
 // task 9 - перевод секунд в часы и вывод в формате чч:мм:сс
 document.querySelector('.ninth-task__button').onclick = function () {
+    // получаем ввод секунд от пользователя
     let aa = parseInt(prompt('Введите секунды'));
 
+    // объявляю функцию
     let calcHrsMinSec = function (a) {
+        // переменные для секунд, минут и часов (отдельно)
     let seconds = a;
     let minutes;
     let hours;
 
+    // делю секунды на 60 - т.е. перевожу в минуты и округляю значение вниз
     minutes = Math.floor(seconds / 60);
+    // остаток от перевода в минуты присваиваю секундам
     seconds = seconds % 60;
+
     hours = Math.floor(minutes / 60);
-    minutes = minutes % 60;
+    minutes = (minutes % 60);
 
     let massiv = [];
     massiv.push(hours);     massiv.push(minutes);     massiv.push(seconds);
     return massiv;
 }
 
+// объявляю функцию для вывода сконвертированного времени
     let displayHrsMinSec = function (a) {
+        // переменная для промежуточных вычислений
         let result = '';
-        let dvoetochie;
+        let dvoetochie = ':';
         for (let i = 0; i < a.length; i++) {
             // проверка не является ли значение массива последним
             if (i !== (a.length - 1)) {
-                dvoetochie = ':';
-
                 // проверка состоит число из двух цифр или нет
                 if (a[i] < 10) {
                     // если состоит из одной цифры то перед значением вставляем 0
                     result = result + '0' + a[i] + dvoetochie;
                 } else {
-                    // если из двух цифр то 0 не вставляем 
+                    // если из двух цифр, то 0 не вставляем 
                     // (число и так подходит под формат чч:мм:сс)
                     result = result + a[i] + dvoetochie;
                 }
             } else {
-                dvoetochie = '';
                 // всё то же что и в if ↑↑↑
                 if (a[i] < 10) {
                     // если состоит из одной цифры то перед значением вставляем 0
-                    result = result + '0' + a[i] + dvoetochie;
+                    result = result + '0' + a[i];
                 } else {
                     // если из двух цифр то 0 не вставляем 
                     // (число и так подходит под формат чч:мм:сс)
-                    result = result + a[i] + dvoetochie;
+                    result = result + a[i];
                 }
             }
-        }
+        } 
         // выходим из цикла for
         return result;
     }
-    console.log('Конвертированное время = ' + displayHrsMinSec(calcHrsMinSec(aa)));
-    document.querySelector('.ninth-task__result-output').innerHTML = 'Конвертированное время = ' + displayHrsMinSec(calcHrsMinSec(aa));
+
+    let resultOutput = displayHrsMinSec(calcHrsMinSec(aa));
+    console.log('Конвертированное время = ' + resultOutput);
+    document.querySelector('.ninth-task__result-output').innerHTML = 'Конвертированное время = ' + resultOutput;
 }
 
 // task 10 - написать функцию которая высчитывает разницу между датами
