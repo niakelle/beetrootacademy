@@ -301,6 +301,6 @@ document.querySelector('.tenth-task__button').onclick = function () {
     }
 
     let resultOutput = displayHrsMinSec(calcHrsMinSec(aa,ab));
-    console.log('Конвертированное время = ' + resultOutput);
+    console.log(`Конвертированное время = ${resultOutput}`);
     document.querySelector('.tenth-task__output-one').innerHTML = `Результат время = ${resultOutput}`;
 }
