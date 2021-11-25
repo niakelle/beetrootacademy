@@ -32,16 +32,22 @@ let shoppingList = [
     new ShopItem ("Glue", 1, false, 35.45)
 ];
 
+console.log(`Изначальный вид массива : `,shoppingList);
+
 // функция для сортировки списка продуктов; сначала некупленные
-function compareValues(a, b) {
-    return a.isBought - b.isBought;
+let sortedListIsBought = function (massiv) {
+    result = massiv;
+    function compareValues(a, b) {
+        return a.isBought - b.isBought;
+    }
+    result.sort(compareValues);
+    return result;
 }
-shoppingList.sort(compareValues);
 
 // реализация того же самого стрелочной функцией ↑
 /* shoppingList.sort((a, b) => a.isBought - b.isBought);
 */
-console.log(shoppingList);
+console.log(`Отсортированный массив, сначала не купленные : `, sortedListIsBought(shoppingList));
 
 // Функція приймає назву продукту і відзначає його як придбаний.
 let buyProduct = function (massiv, name) {
@@ -54,8 +60,9 @@ let buyProduct = function (massiv, name) {
 };
 
 let outputBuyProduct = buyProduct(shoppingList,'Cocoa');
-console.log(outputBuyProduct);
+console.log(`Покупаем Cocoa, результат: `, outputBuyProduct);
 
+// Строим список некупленных продуктов
 let constructBuyList = function (massiv) {
     let result = [];
     for (let i = 0; i < massiv.length; i++) {
@@ -67,7 +74,7 @@ let constructBuyList = function (massiv) {
 } 
 
 let toBuyList = constructBuyList(shoppingList);
-console.log(toBuyList);
+console.log(`Вывод списка некупленных продуктов: `, toBuyList);
 
 
 
@@ -80,8 +87,7 @@ console.log(toBuyList);
     одиницю 12, а кількості товарів стало 2, то сума буде 24.
 */
 
-// Я так понимаю по заданию что нужно создать массив без заданного продукта и 
-// вывести его (хотя это и не имеет особого смысла имхо)
+// По заданию что нужно создать массив без заданного продукта и вывести его
 let createArrayWithoutProduct = function (massiv, name) {
     let result = [];
     for (let i = 0; i < massiv.length; i++) {
@@ -93,7 +99,7 @@ let createArrayWithoutProduct = function (massiv, name) {
 }
 
 let arrayWithoutProduct = createArrayWithoutProduct(shoppingList, 'Banana');
-console.log(arrayWithoutProduct);
+console.log(`Удаляем Banana из массива `, arrayWithoutProduct);
 
 let addItemToList = function (object, massiv) {
     let tempI = 0;
@@ -188,3 +194,4 @@ console.log('Сортировка от меньшей суммы до больш
 console.log('Сортировка от большей суммы до меньшей', outputItemsSortedByPriceResultFalse);
 
 
+// Короче у меня всё работает, но с наглядностью результата проблемы
