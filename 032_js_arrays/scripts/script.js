@@ -118,3 +118,73 @@ console.log(addItemToList(testObject, shoppingList));
 console.log('Добавляем повторный банан');
 console.log(addItemToList(testObjectTwo, shoppingList));
 
+
+// task 004-006 maximum
+/* 
+1.  Підрахунок суми всіх продуктів (враховуючи кількість кожного) в списку.
+2.  Підрахунок суми всіх (не) придбаних продуктів.
+3.  Показання продуктів в залежності від суми, (від більшого до меншого / від 
+    меншого до більшого, в залежності від параметра функції, який вона приймає)
+*/
+
+let calcAllSumm = function (massiv) {
+    let result = 0;
+    for (let i = 0; i < massiv.length; i++) {
+        result += massiv[i].getSumm();
+    }
+
+    return result;
+}
+
+let calcAllSummConsoleLog = calcAllSumm(shoppingList);
+console.log(`Сумма всех покупок = ${calcAllSummConsoleLog}`);
+
+
+// task 005 - Підрахунок суми всіх (не) придбаних продуктів.
+
+
+let calcAllSummIsBought = function (massiv, isBought) {
+    let result = 0;
+    for (let i = 0; i < massiv.length; i++) {
+        if (massiv[i].isBought === isBought) {
+            result += massiv[i].getSumm();
+        }
+    }
+    return result;
+}
+
+let calcAllSummIsBoughtResultTrue = calcAllSummIsBought(shoppingList, true);
+let calcAllSummIsBoughtResultFalse = calcAllSummIsBought(shoppingList, false);
+
+console.log (`Подсчёт суммы всех КУПЛЕННЫХ продуктов. Результат = ${calcAllSummIsBoughtResultTrue}`);
+console.log(`Подсчёт суммы всех НЕ купленных продуктов. Результат = ${calcAllSummIsBoughtResultFalse}`);
+
+
+// Task 006 - вывод объектов по порядку в зависимости от суммы
+let outputItemsSortedByPrice = function (massiv, isLowToHigh) {
+    let result = [];
+    if (isLowToHigh) {
+        function compareValuesSummToHigh(a, b) {
+            return a.getSumm() - b.getSumm();
+        }
+        massiv.sort(compareValuesSummToHigh);
+    } else {
+        function compareValuesSummToLow(a, b) {
+            return b.getSumm() - a.getSumm();
+        }
+        massiv.sort(compareValuesSummToLow);
+    }
+    for (let i = 0; i < massiv.length; i++) {
+        result.push(massiv[i]);
+    }
+
+    return result;
+}
+
+let outputItemsSortedByPriceResultTrue = outputItemsSortedByPrice(shoppingList, true);
+let outputItemsSortedByPriceResultFalse = outputItemsSortedByPrice(shoppingList, false);
+
+console.log('Сортировка от меньшей суммы до большей', outputItemsSortedByPriceResultTrue);
+console.log('Сортировка от большей суммы до меньшей', outputItemsSortedByPriceResultFalse);
+
+
