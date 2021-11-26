@@ -70,10 +70,12 @@ document.querySelector('.first-task__button').onclick = function () {
 
 class Marker {
     constructor (color, inkQuantity) {
+        // поле, яке зберігає колір маркера;
         this.color = color;
+        // поле, яке зберігає кількість чорнил у маркері (у відсотках);
         this.inkQuantity = inkQuantity;
     }
-
+    // метод для вводу;
     write(string) {
         let result = '';
         for (let i = 0; i < string.length; i++) {
@@ -91,6 +93,7 @@ class Marker {
     }
 }
 
+// Реалізуй клас, що описує маркер, який можна перезаправляти.
 class BetterMarker extends Marker {
     constructor (color, inkQuantity) {
         super(color,inkQuantity);
@@ -100,7 +103,7 @@ class BetterMarker extends Marker {
         this.inkQuantity = 100;
     }
 }
-
+// Продемонструй роботу написаних методів.
 document.querySelector('.second-task__button').onclick = function () {
     const markerPink = new Marker ('#ff66ff', 10);
     const markerGreen = new Marker('#66ff99', 100);
@@ -122,4 +125,55 @@ document.querySelector('.second-task__button').onclick = function () {
     console.log(`Выводим тот же текст, который был до этого`);
     markerOrange.write(`Очень длинный текст, который не будет дописан до конца если маркер заправлен менее чем на 50% (или около того).`);
     console.log(`В оранжевом маркере осталось ${markerOrange.inkQuantity}% чернил.`);
+}
+
+/* Task 3
+Реалізуй клас Employee, що описує працівника, і створи масив працівників банку.
+Реалізуй клас EmpTable для генерації HTML-коду таблиці зі списком працівників 
+    банку. Масив працівників необхідно передавати через конструктор, а отримувати 
+    HTML-код за допомогою методу getHtml ().
+Створи об'єкт класу EmpTable і виведи на екран результат роботи методу getHtml ().
+*/
+
+class Employee {
+    constructor (name, age, job) {
+        this.name = name;
+        this.age = age;
+        this.job = job;
+    }
+}
+
+class EmpTable {
+    constructor (massiv) {
+        this.massiv = massiv;
+    }
+
+    getHtml() {
+        let result = '<table>';
+        for (let i = 0; i < this.massiv.length; i++) {
+            result += '<tr>';
+            result += `<td>${this.massiv[i].name}</td>`;
+            result += `<td>${this.massiv[i].age}</td>`;
+            result += `<td>${this.massiv[i].job}</td>`;
+            result += '</tr>';
+        }
+        result += '</table>';
+        return result;
+    }
+}
+
+document.querySelector('.third-task__button').onclick = function () {
+    console.log('Создаю переменную-массив сотрудников банка employeeList.');
+    let employeeList = [
+        new Employee ('Сергей', 26, 'Складовщик'),
+        new Employee ('Виталина', 35, 'Бухгалтер'),
+        new Employee ('Лариса', 40, 'Старший Бухгалтер'),
+        new Employee ('Олег', 74, 'Директор банка'),
+    ];
+    console.log(employeeList);
+    console.log('Создаю экземпляр класса EmpTable, передаю туда employeeList и вывожу результат в HTML.');
+    let visibleResult = new EmpTable (employeeList);
+    document.querySelector('.third-task__output').innerHTML += '<br><br>Таблица метода EmpTable.getHtml() ниже ↓↓↓.';
+    document.querySelector('.third-task').innerHTML += visibleResult.getHtml();
+    console.log('Результат выведен.');
 }
