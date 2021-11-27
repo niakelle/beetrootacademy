@@ -1,3 +1,6 @@
+/* Task 001
+Створити сторінку, що показує нумерований список пісень:
+*/
 var playList = [
     {
         author: "LED ZEPPELIN",
@@ -49,3 +52,37 @@ document.querySelector('.first-task__button').onclick = function () {
     document.querySelector('.first-task').innerHTML += resultOutput;
     console.log(resultOutput);
 };
+
+
+/* Task 002
+Створити HTML-сторінку з кнопкою "Відкрити" і модальним вікном. На модальному 
+вікні повинен бути текст і кнопка "Закрити". Спочатку модальне вікно не 
+відображається. При кліку на кнопку "Відкрити" з'являється модальне вікно, 
+на кнопку "Закрити" — зникає.
+*/
+let popup = document.querySelector('.popup');
+document.querySelector('.second-task__button').onclick = function () {
+    popup.classList.remove('hidden');
+}
+document.querySelector('.popup__close').onclick = function () {
+    popup.classList.add('hidden');
+}
+
+/* Task 003
+Створити HTML-сторінку зі світлофором і кнопкою, яка перемикає світлофор на наступний колір.
+*/
+document.querySelector('.third-task__button').onclick = function () {
+    let lampochki = document.querySelectorAll('.svetofor__item');
+    let tempI = -1;
+    for (let i = 0; i < lampochki.length; i++) {
+        if (lampochki[i].classList.contains('active')) {
+            tempI = i;
+            lampochki[i].classList.remove('active');
+        }
+    }
+    tempI += 1;
+    if (tempI >= (lampochki.length) || tempI === -1) {
+        tempI = 0;
+    }
+    lampochki[tempI].classList.add('active');
+}

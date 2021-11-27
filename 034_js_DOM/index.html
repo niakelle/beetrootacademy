@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Document</title>
 </head>
 <body>
@@ -16,11 +17,35 @@
     </section>    
     <hr>
     <section class="second-task">
-        <h2>Задание 2 - какое-то</h2>
-        <button class="second-task__button" type="button">Пока не нажимабельная</button>
+        <h2>Задание 2 - Попап</h2>
+        <button class="second-task__button" type="button">Вызвать попап</button>
         <p class="second-task__output">Результаты работы скрипта также и в консоли!</p>
+        <div class="second-task__relative">
+            <div class="popup hidden">
+                <h2>Lorem, ipsum.</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo 
+                    iusto et animi voluptate sequi beatae itaque a illo quam, praesentium 
+                    natus distinctio dolorum nulla alias architecto assumenda deserunt 
+                    illum nobis repellendus eveniet dolore tempora. In ad dolorem 
+                    laboriosam accusamus quas!
+                </p>
+                <button class="popup__close" type="button">X</button>
+            </div>
+        </div>
     </section>    
     <hr>
+    <section class="third-task">
+        <h2>Задание 3 - Светофор</h2>
+        <div class="svetofor">
+            <div class="svetofor__item red"></div>
+            <div class="svetofor__item yellow"></div>
+            <div class="svetofor__item green"></div>
+        </div>
+        <button class="third-task__button" type="button">Переключить светофор (или включить)</button>
+    </section>
+    <hr>
+
 
     <script src="scripts/script.js"></script>
 </body>
