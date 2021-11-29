@@ -16,22 +16,41 @@ textarea з'являється div з уже зміненим текстом. Н
 */
 
 document.addEventListener("keydown", function (event) {
+    // сохраняю в переменную родительский элемент в котором происходит действие событий (лол)
+    let firstTask = document.querySelector('.first-task');
+
+    // в ифку передаю комбинацию клавиш ctrl и E английскую;
     if (event.ctrlKey && event.code === "KeyE") {
+        // отключаю действие браузера по-умолчанию на комбинацию клавиш ctrl + E 
+        // (по дефолту срабатывает шорткат поиска в гугле)
         event.preventDefault();
-        console.log(`Нажатие ctrl + E.`);
-        let firstTask = document.querySelector('.first-task');
-        let div = document.querySelector('div.first-task__output');
-        let divValue = div.innerHTML;
-        console.log(divValue);
-        div.remove();
-        console.log(divValue);
-        let textArea = document.createElement("textarea");
-        firstTask.append(document.createElement('br'));
-        firstTask.append(textArea);
+        // сохраняю значение inner html нашего дива в переменную divValue;
+        let divValue = document.querySelector('.first-task div').innerHTML;
+
+        console.log(`Нажатие ctrlKey + E. 
+        Убираем div. 
+        Добавляем в конец элемента .first-task новый элемент textarea.
+        Присваиваем значение удалённого div'а в textarea.value.
+        Устанавливаем фокус на textarea (для удобства).`);
+
+        document.querySelector('.first-task div').remove();
+
+        firstTask.append(document.createElement("textarea"));
         document.querySelector('textarea').value = divValue;
+        document.querySelector('textarea').focus();
     }
-    if (event.ctrlKey && event.code === "KeyE") {
-        
+
+    // привязываем к ифу комбинацию клавиш ctrl и numpad+
+    if (event.ctrlKey && event.code === "NumpadAdd") {
+        event.preventDefault();
+        console.log(`Нажатие ctrlKey + NumpadPlus.
+        Создаём элемент див и добавляем его в конец элемента .first-task .
+        Находим value элемента textarea и присваиваем его в div который находится в .first-task.
+        Последним действием уничтожаем textarea.`);
+
+        firstTask.append(document.createElement('div'));
+        document.querySelector('.first-task div').innerHTML = document.querySelector('textarea').value;
+        document.querySelector('textarea').remove();
     }
 });
 
