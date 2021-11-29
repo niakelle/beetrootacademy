@@ -54,3 +54,78 @@ document.addEventListener("keydown", function (event) {
     }
 });
 
+class Table {
+    constructor (name, age, isMarried) {
+        this.name = name;
+        this.age = age;
+        this.isMarried = isMarried;
+    }
+
+
+}
+
+let arrayTable = [
+    new Table ('Дарья', 19, false),
+    new Table ('Тимофей', 25, false),
+    new Table ('София', 22, true),
+    new Table ('Георгий', 20, false),
+    new Table ('Таисия', 19, true),
+    new Table ('Матвей', 38, true),
+    new Table ('Евгений', 77, true),
+    new Table ('Елизавета', 19, false),
+];
+
+/* let sortedTable = function (massiv) {
+    result = massiv.slice();
+    function compareValues(a,b) {
+        return a.age - b.age;
+    }
+    result.sort(compareValues);
+    return result;
+} */
+
+function buildTable (array) {
+    let result = '<table>';
+    result += '<tr><th>Имя</th><th>Возраст</th><th>Женат/Замужем?</th></tr>';
+    for (let i = 0; i < arrayTable.length; i++) {
+        result += `<tr><td>${array[i].name}</td><td>${array[i].age}</td><td>${array[i].isMarried}</td></tr>`;
+    }
+
+    result += '</table>';
+    return result;
+}
+
+document.querySelector('.second-task__button').onclick = function () {
+    function outputSecondTask () {
+        let tempVar = buildTable(arrayTable);
+        document.querySelector('.second-task').append(document.createElement('div'));
+        document.querySelector('.second-task div').innerHTML = tempVar;
+    }
+    outputSecondTask ();
+    let tableTh = document.querySelectorAll('table tr th');
+    for (let i = 0; i < tableTh.length; i++) {
+        if (tableTh[i]) {
+            tableTh[i].addEventListener("click", function (event) {
+                console.log('it WOIKS!');
+                function compareValues(a,b) {
+                    if (i === 0) {
+                        return a.name - b.name;
+                    }
+                    if (i === 1) {
+                        return a.age - b.age;
+                    }
+                    if (i === 2) {
+                        return a.isMarried - b.isMarried;
+                    }
+                }
+                arrayTable.sort(compareValues);
+                outputSecondTask ();
+            });
+        }
+    }
+}
+
+/* 
+Не сортирует по именам. Я уже сам потерял логику работы сортировки таблицы, потом доделаю
+*/
+
