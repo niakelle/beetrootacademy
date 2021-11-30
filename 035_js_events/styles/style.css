@@ -5,6 +5,10 @@
 
 /* Task 002 - Таблица */
 
+.hidden {
+    display: none;
+}
+
 table tr th {
     border: 2px solid grey;
     padding: 5px;
@@ -19,3 +23,4 @@ table tr th:hover {
 table tr td {
     border: 1px solid grey;
 }
+

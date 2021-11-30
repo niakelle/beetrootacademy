@@ -75,15 +75,6 @@ let arrayTable = [
     new Table ('Елизавета', 19, false),
 ];
 
-/* let sortedTable = function (massiv) {
-    result = massiv.slice();
-    function compareValues(a,b) {
-        return a.age - b.age;
-    }
-    result.sort(compareValues);
-    return result;
-} */
-
 function buildTable (array) {
     let result = '<table>';
     result += '<tr><th>Имя</th><th>Возраст</th><th>Женат/Замужем?</th></tr>';
@@ -95,13 +86,10 @@ function buildTable (array) {
     return result;
 }
 
-document.querySelector('.second-task__button').onclick = function () {
-    function outputSecondTask () {
-        let tempVar = buildTable(arrayTable);
-        document.querySelector('.second-task').append(document.createElement('div'));
-        document.querySelector('.second-task div').innerHTML = tempVar;
-    }
-    outputSecondTask ();
+function outputSecondTask () {
+    let tempVar = buildTable(arrayTable);
+    document.querySelector('.second-task').append(document.createElement('div'));
+    document.querySelector('.second-task div').innerHTML = tempVar;
     let tableTh = document.querySelectorAll('table tr th');
     for (let i = 0; i < tableTh.length; i++) {
         if (tableTh[i]) {
@@ -109,7 +97,15 @@ document.querySelector('.second-task__button').onclick = function () {
                 console.log('it WOIKS!');
                 function compareValues(a,b) {
                     if (i === 0) {
-                        return a.name - b.name;
+                        let nameA = a.name.toLowerCase();
+                        let nameB = b.name.toLowerCase();
+                        if (nameA < nameB) {
+                            return -1
+                        } 
+                        if (nameA > nameB) {
+                            return 1
+                        }
+                        return 0
                     }
                     if (i === 1) {
                         return a.age - b.age;
@@ -125,7 +121,10 @@ document.querySelector('.second-task__button').onclick = function () {
     }
 }
 
-/* 
-Не сортирует по именам. Я уже сам потерял логику работы сортировки таблицы, потом доделаю
-*/
+document.querySelector('.second-task__button').onclick = function () {
+    outputSecondTask ();
+    document.querySelector('.second-task__button').classList.add('hidden');
+}
+
+
 
