@@ -24,3 +24,23 @@ table tr td {
     border: 1px solid grey;
 }
 
+/* Task 003 - Перетягивание */
+.block-for-mouse {
+    position: relative;
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    /* padding: 20px; */
+    margin-top: 20px;
+}
+
+.block__inside-element {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    z-index: 5;
+    left: 50%;
+    top: 50%;
+}

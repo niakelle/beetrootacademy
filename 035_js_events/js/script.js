@@ -15,6 +15,7 @@ textarea з'являється div з уже зміненим текстом. Н
 тягнути її далі.
 */
 
+// task 001 - Сочетания клавиш
 document.addEventListener("keydown", function (event) {
     // сохраняю в переменную родительский элемент в котором происходит действие событий (лол)
     let firstTask = document.querySelector('.first-task');
@@ -54,6 +55,7 @@ document.addEventListener("keydown", function (event) {
     }
 });
 
+// task 002 - таблица
 class Table {
     constructor (name, age, isMarried) {
         this.name = name;
@@ -127,4 +129,38 @@ document.querySelector('.second-task__button').onclick = function () {
 }
 
 
+
+
+
+
+
+// task 003 - перетягивание
+// родитель
+const blockForMouse = document.querySelector('.block-for-mouse');
+// красный
+const blockInsideElement = document.querySelector('.block__inside-element');
+
+
+let parentCords = blockForMouse.getBoundingClientRect();
+let childCords = blockInsideElement.getBoundingClientRect();
+
+
+let move = function (event) {
+
+    if (parentCords.left < event.pageX && parentCords.left + parentCords.width - childCords.width > event.pageX && 
+        parentCords.top < event.pageY && parentCords.top + parentCords.height - childCords.height > event.pageY) {
+        blockInsideElement.style.left = event.pageX - parentCords.left +'px';
+        blockInsideElement.style.top = event.pageY - parentCords.top +'px';
+    }
+};
+
+blockInsideElement.addEventListener("mousedown", function (event) {
+    event.preventDefault();
+    document.addEventListener('mousemove', move);
+});
+
+blockForMouse.addEventListener('mouseup', function (event) {
+    event.preventDefault();
+    document.removeEventListener('mousemove', move);
+});
 
