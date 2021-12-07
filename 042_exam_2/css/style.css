@@ -2,7 +2,7 @@
    v2.0-modified | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Sans+Pro:wght@300;400&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -369,6 +369,8 @@ textarea {
 }
 
 .header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   padding-top: 53px;
   height: 800px;
@@ -386,8 +388,7 @@ textarea {
           height: 100%;
       } */
 }
-
-.nav {
+.header .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -396,20 +397,24 @@ textarea {
           justify-content: space-between;
   padding: 0 215px;
 }
-.nav__links {
+.header .nav__links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   font-family: "Source Sans Pro";
+  max-width: 525px;
+  width: 100%;
+  margin-left: 89px;
+  gap: 3px;
 }
-.nav__link {
-  margin-right: 84px;
+.header .nav__link {
+  margin-right: 90px;
   position: relative;
   font-weight: 400;
   font-size: 14px;
@@ -417,10 +422,18 @@ textarea {
               margin-left: 14px;
           } */
 }
-.nav__link:last-of-type {
+.header .nav__link:last-of-type {
   margin-right: 0;
 }
-.nav__link::before {
+.header .nav__link-s {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+.header .nav__link-s:visited {
+  color: white;
+}
+.header .nav__link-s::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: absolute;
@@ -433,26 +446,10 @@ textarea {
   border: 1px solid white;
   background-color: transparent;
 }
-.nav__link:hover::before {
-  position: absolute;
-  content: "";
-  top: 2px;
-  left: -14px;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
+.header .nav__link-s:hover::before {
   background-color: white;
 }
-.nav__link-s {
-  text-decoration: none;
-  color: white;
-  text-transform: uppercase;
-}
-.nav__link-s:visited {
-  color: white;
-}
-
-.social {
+.header .social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -464,6 +461,66 @@ textarea {
           justify-content: space-between;
   width: 160px;
 }
-.social a:hover .social a svg {
-  fill: black;
+.header .social a:hover svg path {
+  fill: #82dcff;
+}
+.header .social a:hover svg circle {
+  fill: rgba(255, 255, 255, 0.4);
+}
+.header .text-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-height: 413px;
+  height: 100%;
+  margin-top: 233px;
+  text-align: center;
+  color: white;
+}
+.header .text-content__heading {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 80px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-left: 5px;
+}
+.header .text-content__paragraph {
+  font-family: "Montserrat";
+  font-weight: normal;
+  font-size: 18px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-top: 30px;
+  margin-left: 3px;
+}
+.header .text-content__arrow-down {
+  margin-top: auto;
+}
+.header .text-content__arrow-down a:hover svg path {
+  fill: #82dcff;
+}
+.header .text-content__arrow-down a:hover svg circle {
+  fill: rgba(255, 255, 255, 0.4);
+}
+
+.main {
+  margin-top: 100px;
+}
+.main .projects {
+  max-height: 1370px;
+  height: 100%;
+}
+.main .projects__trade-center {
+  margin-top: 100px;
+}
+.main .projects__commerce-center {
+  margin-top: 100px;
+}
+.main .news {
+  margin-top: 140px;
 }
