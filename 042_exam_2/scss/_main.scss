@@ -97,62 +97,66 @@
         }
     }
 
-    .social {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 160px;
-    
-    
-        & a:hover svg path {
+
+
+
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 160px;
+
+
+    & a:hover svg path {
+        fill: var(--hover-fill-icon);
+    }
+
+    & a:hover svg circle {
+        fill: var(--hover-fill-circle);
+    }
+
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    max-height: 413px;
+    height: 100%;
+
+    margin-top: 233px;
+    text-align: center;
+    color: white;
+
+    &__heading {
+        font-family: 'Montserrat';
+        font-weight: bold;
+        font-size: 80px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-left: 5px;
+    }
+
+    &__paragraph {
+        font-family: 'Montserrat';
+        font-weight: normal;
+        font-size: 18px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        margin-top: 30px;
+        margin-left: 3px;
+    }
+
+    &__arrow-down {
+        margin-top: auto;
+
+        &:hover svg path {
             fill: var(--hover-fill-icon);
         }
     
-        & a:hover svg circle {
+        &:hover svg circle {
             fill: var(--hover-fill-circle);
-        }
-    
-    }
-
-    .text-content {
-        display: flex;
-        flex-direction: column;
-        max-height: 413px;
-        height: 100%;
-    
-        margin-top: 233px;
-        text-align: center;
-        color: white;
-    
-        &__heading {
-            font-family: 'Montserrat';
-            font-weight: bold;
-            font-size: 80px;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin-left: 5px;
-        }
-    
-        &__paragraph {
-            font-family: 'Montserrat';
-            font-weight: normal;
-            font-size: 18px;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            margin-top: 30px;
-            margin-left: 3px;
-        }
-    
-        &__arrow-down {
-            margin-top: auto;
-    
-            &:hover svg path {
-                fill: var(--hover-fill-icon);
-            }
-        
-            &:hover svg circle {
-                fill: var(--hover-fill-circle);
-            }
         }
     }
 }
@@ -651,9 +655,55 @@
     }
 
     &__links {
-        background-image: linear-gradient(251.06deg, #7E5AFF -2.19%, #55B7FF 103.21%);
+        box-sizing: border-box;
+        position: relative;
         width: 100%;
+        
         height: 550px;
+        padding: 150px 10px 0 10px;
+
+        &-wrapper {
+            margin: 0 auto;
+            max-width: 770px;
+            width: 100%;
+
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(251.06deg, #7E5AFF -2.19%, #55B7FF 103.21%);
+            z-index: -1;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/footer/real-mask_footer.png);
+            z-index: -1;
+        }
+
+        &-flex {
+            display: flex;
+            justify-content: space-between;
+
+            margin-top: 53px;
+
+        }
+    }
+
+    &__copyright {
+        font-family: 'Montserrat';
+        font-size: 14px;
+        color: #fff;
+        margin-top: 43px;
     }
 }
 
@@ -715,11 +765,18 @@
         font-family: 'Montserrat';
         font-weight: normal;
         font-size: 18px;
-        border-bottom: 1px solid grey;
+        border-bottom: 1px solid rgba(44, 64, 88, 0.2);
 
         &:focus {
             color: black;
             border-color: var(--dark-text);
+        }
+
+        &::placeholder {
+            color: rgba(75, 85, 98, 0.5);
+            font-family: 'Montserrat';
+            font-weight: normal;
+            font-size: 18px;
         }
     }
 
@@ -779,3 +836,4 @@
         }
     }
 }
+
