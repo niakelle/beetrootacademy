@@ -149,7 +149,7 @@
     }
 
     &__arrow-down {
-        margin-top: auto;
+        margin: auto auto 0 auto;
 
         &:hover svg path {
             fill: var(--hover-fill-icon);
@@ -652,6 +652,7 @@
         width: 770px;
         height: 450px;
         background-color: #fff;
+        z-index: 1;
     }
 
     &__links {
@@ -786,7 +787,6 @@
     &__input-email {
         margin-top: 21px;
     }
-
 
 
     &__submit {

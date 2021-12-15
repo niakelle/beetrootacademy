@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
     <title>Monticello</title>
 </head>
 <body class="body">
@@ -15,10 +16,10 @@
                 <img src="img/header/Logo.svg" alt="Logo">
             </a>
             <ul class="nav__links">
-                <li class="nav__link"><a href="#" class="nav__link-s">about us</a></li>
-                <li class="nav__link"><a href="#" class="nav__link-s">projects</a></li>
-                <li class="nav__link"><a href="#" class="nav__link-s">news</a></li>
-                <li class="nav__link"><a href="#" class="nav__link-s">contact</a></li>
+                <li class="nav__link" id="link__about-us"><a href="#" class="nav__link-s">about us</a></li>
+                <li class="nav__link" id="link__projects"><a href="#" class="nav__link-s">projects</a></li>
+                <li class="nav__link" id="link__news"><a href="#" class="nav__link-s">news</a></li>
+                <li class="nav__link" id="link__contacts"><a href="#" class="nav__link-s">contact</a></li>
             </ul>
             <div class="social">
                 <!-- facebook -->
@@ -272,7 +273,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="contacts__flex-container-right">
+                <form class="contacts__flex-container-right">
                     <input type="text" 
                     name="" 
                     id="" 
@@ -288,7 +289,7 @@
                     <button type="submit" class="contacts__submit">
                         submit
                     </button>
-                </div>
+                </form>
             </div>
         </div>
         <div class="footer__links">
