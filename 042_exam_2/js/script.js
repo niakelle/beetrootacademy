@@ -17,7 +17,7 @@ function scrollToSmth (a) {
 // Плавная прокрутка к секциям страницы
 arrowDown.addEventListener('click', function(event) {
     event.preventDefault();
-    let projectCoords = document.querySelector('.main').getBoundingClientRect().top;
+    let projectCoords = document.querySelector('.main').getBoundingClientRect().top - 135;
     scrollToSmth(projectCoords);
 });
 aboutUsLink.addEventListener('click', function(event) {
@@ -27,7 +27,7 @@ aboutUsLink.addEventListener('click', function(event) {
 });
 projectsLink.addEventListener('click', function(event) {
     event.preventDefault();
-    let projectCoords = document.querySelector('.main').getBoundingClientRect().top;
+    let projectCoords = document.querySelector('.main').getBoundingClientRect().top - 135;
     scrollToSmth(projectCoords);
 });
 newsLink.addEventListener('click', function(event) {

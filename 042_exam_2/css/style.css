@@ -817,16 +817,13 @@ textarea {
   border-top: 1px solid #fff;
 }
 .news__slider {
-  margin-top: 95px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 30px;
+  margin: 95px auto 0 auto;
+  max-width: 1170px;
+  width: 100%;
+  position: relative;
 }
 .news__slider-card {
+  margin: 0 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -839,6 +836,56 @@ textarea {
   width: 370px;
   height: 514px;
   background-color: #fff;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: calc(50% - 55px);
+  z-index: 10;
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+.slick-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.slick-prev {
+  left: -100px;
+  background: url(../img/news/slider/Left.svg) 0 0/100% no-repeat;
+}
+.slick-next {
+  right: -100px;
+  background: url(../img/news/slider/Right.svg) 0 0/100% no-repeat;
+}
+.slick-dots {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.slick-dots li {
+  list-style: none;
+  margin: 0 18px;
+}
+.slick-dots li.slick-active button {
+  background-color: #fff;
+}
+.slick-dots button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: transparent;
 }
 
 .slider-card__content {
