@@ -894,3 +894,16 @@
     }
 }
 
+
+
+.valid-input {
+    &, &:focus {
+        border-color: rgb(30, 255, 0);
+    }
+}
+
+.invalid-input {
+    &, &:focus {
+        border-color: red;
+    }
+}

@@ -1242,3 +1242,11 @@ textarea {
   width: 100%;
   max-width: 312px;
 }
+
+.valid-input, .valid-input:focus {
+  border-color: #1eff00;
+}
+
+.invalid-input, .invalid-input:focus {
+  border-color: red;
+}
