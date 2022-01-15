@@ -77,8 +77,7 @@ b {
 	margin-top: 200px;
 
 	& .content {
-		// 11fr left 7fr right including paddings
-
+		box-sizing: border-box;
 		display: grid;
 		grid-template-columns: 13fr 4fr;
 		gap: 12px;
@@ -212,7 +211,7 @@ b {
 			width: $post__date-width;
 			height: 35px;
 			text-align: center;
-			color: #006e99;
+			color: $post__date-color;
 			border-radius: 3px 0 0 3px;
 			padding-top: 6px;
 			font-size: 12px;
@@ -291,7 +290,7 @@ b {
 							color: #006186;
 							background-color: $akcent__green;
 							&:hover {
-								background-color: #b6dd99;
+								background-color: $akcent__green-hover;
 							}
 						}
 						&__comment {
@@ -299,7 +298,7 @@ b {
 							color: white;
 							background-color: $heading__blue;
 							&:hover {
-								background-color: #81b5c8;
+								background-color: $heading__blue-hover;
 							}
 						}
 					}
@@ -360,14 +359,38 @@ b {
 	border-radius: 5px;
 	padding: 5px 10px;
 
+	&__picture {
+		width: 100px;
+		height: 100px;
+		border: 2px solid $akcent__green;
+		border-radius: 3px;
+	}
+
 	&__flex-wrapper {
 		display: flex;
+		height: 100%;
+		box-sizing: border-box;
 	}
 	&__left-column, &__right-column {
+		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-start;
+	}
+	&__left-column {
+		border-right: 1px dashed $akcent__green;
+		
+	}
+
+	&__exit {
+		background-color: $warning_red;
+		border: none;
+		border-radius: 3px;
+		box-sizing: border-box;
+		text-transform: uppercase;
+		color: white;
+		font-size: 14px;
 	}
 
 	&__heading {
@@ -376,5 +399,71 @@ b {
 		font-family: 'Bebas Neue', cursive;
 		font-size: 24px;
 		color: rgba(255, 255, 255, 0.55);
+	}
+}
+
+.footer {
+	margin-top: 200px;
+	color: white;
+
+	&__image {
+		position: absolute;
+		right: -300px;
+		bottom: 0px;
+	}
+	& .wrapper {
+		position: relative;
+		box-sizing: border-box;
+		background-color: #535353cc;
+		border-radius: 5px 5px 0 0;
+		padding: 12px;
+	}
+
+	&__akcent-green {
+		text-decoration: underline;
+		color: $akcent__green;
+	}
+
+	&__heading-blue {
+		text-decoration: underline;
+		color: $heading__blue;
+	}
+
+	&__red {
+		color: #E88686;
+	}
+
+	&__link {
+		box-sizing: border-box;
+		display: block;
+		background-color: $akcent__green;
+		text-decoration: none;
+		text-transform: uppercase;
+		width: fit-content;
+		height: 40px;
+		padding: 12px 10px 0 10px;
+		color: $post__date-color;
+		border-radius: 3px;
+		margin-top: 8px;
+
+		&:hover {
+			background-color: $akcent__green-hover;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: flex-start;
+		margin-top: 10px;
+	}
+	&__button {
+		padding: 8px 10px 0 10px;
+		width: 88px;
+		height: 31px;
+		box-sizing: border-box;
+		background-color: #6e6e6e;
+		margin-right: 10px;
+		text-align: center;
+		border-radius: 3px;
 	}
 }
