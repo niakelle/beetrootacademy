@@ -377,6 +377,7 @@ b {
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-start;
+		
 	}
 	&__left-column {
 		border-right: 1px dashed $akcent__green;
@@ -399,6 +400,17 @@ b {
 		font-family: 'Bebas Neue', cursive;
 		font-size: 24px;
 		color: rgba(255, 255, 255, 0.55);
+	}
+
+
+
+	&__admin-panel {
+		display: block;
+		background-color: $akcent__green;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: white;
+		align-self: flex-end;
 	}
 }
 
