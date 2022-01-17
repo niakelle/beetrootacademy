@@ -4,13 +4,11 @@ b {
 
 .body {
 	background-color: rgb(197, 197, 197);
-	background: url("../images/body/background-2.png") no-repeat;
+	background: url("../images/body/background-2.jpg") no-repeat;
 	background-size: cover;
-
 } 
 
 .wrapper {
-	/* padding: 0 17%; */
 	max-width: 1200px;
 	margin: 0 auto;
 }
@@ -116,13 +114,134 @@ b {
 	}
 }
 
+.burger {
+	display: none;
+	width: 200px;
+	position: relative;
+	color: white;
+	text-align: center;
+	height: 40px;
+	font-family: 'Arial';
+	&:hover {
+		background-color: $heading__blue;
+		border-radius: 3px;
+		& > .burger__label {
+			color: white;
+		}
+	}
+
+	&__checkbox{
+		display: none;
+	}
+	&__label {
+		box-sizing: border-box;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		cursor: pointer;
+		height: 100%;
+		width: 100%;
+		z-index: 2;
+		line-height: 40px;
+		color: black;
+		
+
+		&:hover {
+
+			border-radius: 3px;
+
+		}
+	}
+
+	&-line {
+		position: absolute;
+		top: 8px;
+		left: 10px;
+		width: 35px;
+		height: 2px;
+		background-color: black;	
+		transition: .5s all;
+
+		&.second, &.third {
+			top: 18px;
+		}
+		&.fourth {
+			top: 28px;
+		}
+	}
+
+	&__menu {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		transform: translateY(100%);
+		max-height: 0;
+		font-size: 0;
+		overflow: hidden;
+		transition: .5s all;
+		text-align: center;
+
+		&-link {
+			box-sizing: border-box;
+			display: block;
+			width: 100%;
+			padding: 10px;
+			color: black;
+			text-decoration: none;
+			border-top: 1px solid rgba(255,255,255,.3);
+			background-color: #e2e2e2;
+
+			&:hover {
+				background-color: $heading__blue;
+				color: white;
+			}
+		}
+	}
+}
+#burger-checkbox:checked ~ .burger__menu {
+	max-height: 500px;
+	font-size: 16px;
+}
+#burger-checkbox:checked ~ .burger-line.first,
+#burger-checkbox:checked ~ .burger-line.fourth {
+	display: none;
+}
+#burger-checkbox:checked ~ .burger-line.second {
+	transform: rotate(45deg);
+}
+#burger-checkbox:checked ~ .burger-line.third {
+	transform: rotate(-45deg);
+}
+
 .search {
 	background-color: #707070;
+	position: relative;
 	width: 230px;
 	height: 100%;
+	padding-right: 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	&::before, &::after {
+		content: "";
+		position: absolute;
+		width: 42px;
+		height: 42px;
+		transform: rotateZ(45deg);
+	}
+	&::before {
+		top: 9px;
+		left: -21px;
+		background-color: #707070;
+	}
+	&::after {
+		top: 9px;
+		right: -21px;
+		background-color: #e2e2e2;
+	}
 
 	&__input {
 		box-sizing: border-box;
@@ -132,6 +251,10 @@ b {
 		border: none;
 		border-radius: 3px;
 		padding: 0 14px;
+
+		&:focus {
+			border: 2px solid $heading__blue;
+		}
 	}
 }
 
@@ -167,7 +290,7 @@ b {
 
 }
 
-// slick slider
+// slider
 .slider {
 	box-sizing: border-box;
 	position: relative;
@@ -338,14 +461,17 @@ b {
 
 	.post {
 		position: relative;
-		display: flex;
+		display: none;
 		width: 100%;
 		box-sizing: border-box;
 		padding: 10px;
 		background-color: #FFFFFF;
 		border: 1px solid #DADADA;
-		border-radius: 5px;
 		margin-bottom: 10px;
+		
+		&.active {
+			display: flex;
+		}
 
 		&__date {
 			box-sizing: border-box;
@@ -365,12 +491,14 @@ b {
 
 		&__image {
 			width: $post__image-width;
-			/* height: calc($post__image-width * 0.4); */
 			height: calc(100% - 10px);
 			background: url("../images/posts/guilty-crown.jpg") no-repeat;
 			background-size: cover;
 			border: 5px solid $heading__blue;
 			border-radius: 3px 0 3px 3px;
+			&.kurokami {
+				background: url("../images/slider/kurokami003.jpg") no-repeat;
+			}
 		}
 
 		&__content {

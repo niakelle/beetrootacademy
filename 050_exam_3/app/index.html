@@ -5,13 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Watch Anime</title>
-		<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="body">
 	<header class="header">
 			<div class="wrapper">
 				<nav class="nav">
+					<div class="burger">
+						<input type="checkbox" 
+						name="" 
+						id="burger-checkbox" 
+						class="burger__checkbox">
+						<label for="burger-checkbox" class="burger__label">MENU</label>
+						<div class="burger-line first"></div>
+						<div class="burger-line second"></div>
+						<div class="burger-line third"></div>
+						<div class="burger-line fourth"></div>
+						<div class="burger__menu">
+							<a href="#" class="burger__menu-link">Аниме</a>
+							<a href="#" class="burger__menu-link">Полнометражки</a>
+							<a href="#" class="burger__menu-link">Манга</a>
+							<a href="#" class="burger__menu-link">Игры</a>
+							<a href="#" class="burger__menu-link">Картинки</a>
+							<a href="#" class="burger__menu-link">Музыка</a>
+						</div>
+					</div>
 					<ul class="nav__links">
 						<li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
 						<li class="nav__item one">
@@ -53,7 +72,7 @@
 						</li>
 					</ul>
 					<div class="nav__search search">
-						<input class="search__input" type="search" name="" id="" 
+						<input class="search__input" type="search" name="" id="search__nav" 
 						placeholder="Поиск...">
 					</div>
 					<a href="#" class="nav__logo">
@@ -126,7 +145,7 @@
 
 						</section>
 						<section class="posts">
-							<div class="post">
+							<div class="post active">
 								<div class="post__image"></div>
 								<div class="post__content">
 									<h3 class="post__heading">корона грешника - 1 серия</h3>
@@ -153,9 +172,35 @@
 								<div class="post__date">05.11<br>2022</div>
 							</div>
 							<div class="post">
+								<div class="post__image kurokami"></div>
+								<div class="post__content">
+									<h3 class="post__heading">Тёмная богиня - 2 серия</h3>
+									<div class="post__info">
+										<div class="post__left-column">
+											<p><b>Производство: </b>Япония</p>
+											<p><b>Жанр: </b>сёнэн</p>
+											<p><b>Выпуск: </b> с 08.01.2009</p>
+										</div>
+										<div class="post__right-column">
+											<p><b>Режиссёр: </b>Цунэо Кобаяси</p>
+											<p><b>Автор: </b>Далл Ён Лим</p>
+											<p><b>Озвучка: </b>JAM, Tinda</p>
+										</div>
+									</div>
+									<div class="post__watches">
+										<b>Просмотров: </b> 241 | <b>Категория: </b> other Anime & Games
+									</div>
+									<div class="post__buttons">
+										<a href="#" class="post__watch post__button">Просмотр</a>
+										<a href="#" class="post__comment post__button">Обсудить</a>
+									</div>
+								</div>
+								<div class="post__date">05.11<br>2022</div>
+							</div>
+							<div class="post">
 								<div class="post__image"></div>
 								<div class="post__content">
-									<h3 class="post__heading">корона грешника - 1 серия</h3>
+									<h3 class="post__heading">корона грешника - 3 серия</h3>
 									<div class="post__info">
 										<div class="post__left-column">
 											<p><b>Производство: </b>Япония</p>
@@ -181,7 +226,7 @@
 							<div class="post">
 								<div class="post__image"></div>
 								<div class="post__content">
-									<h3 class="post__heading">корона грешника - 1 серия</h3>
+									<h3 class="post__heading">корона грешника - 4 серия</h3>
 									<div class="post__info">
 										<div class="post__left-column">
 											<p><b>Производство: </b>Япония</p>
@@ -207,7 +252,7 @@
 							<div class="post">
 								<div class="post__image"></div>
 								<div class="post__content">
-									<h3 class="post__heading">корона грешника - 1 серия</h3>
+									<h3 class="post__heading">корона грешника - 5 серия</h3>
 									<div class="post__info">
 										<div class="post__left-column">
 											<p><b>Производство: </b>Япония</p>
@@ -233,11 +278,11 @@
 						</section>
 						<section class="pages">
 							<ul class="pages__list">
-								<li class="pages__item"><a href="#" class="pages__link active">1</a></li>
-								<li class="pages__item"><a href="#" class="pages__link">2</a></li>
-								<li class="pages__item"><a href="#" class="pages__link">3</a></li>
-								<li class="pages__item"><a href="#" class="pages__link">4</a></li>
-								<li class="pages__item"><a href="#" class="pages__link">5</a></li>
+								<li class="pages__item"><a href="#" value="1" class="pages__link active">1</a></li>
+								<li class="pages__item"><a href="#" value="2" class="pages__link">2</a></li>
+								<li class="pages__item"><a href="#" value="3" class="pages__link">3</a></li>
+								<li class="pages__item"><a href="#" value="4" class="pages__link">4</a></li>
+								<li class="pages__item"><a href="#" value="5" class="pages__link">5</a></li>
 							</ul>
 						</section>
 					</div>					
@@ -287,7 +332,7 @@
 											<a href="#" class="profile__admin-link">Сменить данные</a>
 										</li>
 									</ul>
-									<button class="profile__admin-panel">АдмиНпанель</button>
+									<button class="profile__admin-panel">АдмиНка</button>
 								</div>
 							</div>
 						</div>
