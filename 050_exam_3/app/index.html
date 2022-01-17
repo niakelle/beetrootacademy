@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Watch Anime</title>
+		<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="body">
@@ -12,19 +13,53 @@
 			<div class="wrapper">
 				<nav class="nav">
 					<ul class="nav__links">
-						<li class="nav__link">Главная</li>
-						<li class="nav__link">Lorem</li>
-						<li class="nav__link">Lorem 2</li>
-						<li class="nav__link">Lorem 3</li>
-						<li class="nav__link">Lorem 4</li>
+						<li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
+						<li class="nav__item one">
+							<a href="#" class="nav__link">bleach</a>
+							<ul class="nav__dropdown one">
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Аниме</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Полнометражки</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Манга</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Игры</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Картинки</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Музыка</a></li>
+							</ul>
+						</li>
+						
+						<li class="nav__item two">
+							<a href="#" class="nav__link">one piece</a>
+							<ul class="nav__dropdown ецщ">
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Аниме</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Полнометражки</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Манга</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Игры</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Картинки</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Музыка</a></li>
+							</ul>
+						</li>
+						<li class="nav__item three">
+							<a href="#" class="nav__link">другие</a>
+							<ul class="nav__dropdown three">
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Аниме</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Полнометражки</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Манга</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Игры</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Картинки</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Музыка</a></li>
+							</ul>
+						</li>
+						<li class="nav__item four">
+							<a href="#" class="nav__link">ссылка</a>
+						</li>
 					</ul>
 					<div class="nav__search search">
 						<input class="search__input" type="search" name="" id="" 
 						placeholder="Поиск...">
 					</div>
-					<div class="nav__logo">
-
-					</div>
+					<a href="#" class="nav__logo">
+						<h2 class="nav__logo-heading">WATCH-<span class="heading-blue">ANIME</span></h2>
+						<p class="nav__logo-paragraph">watchanime.com</p>
+					</a>
 				</nav>
 			</div>
     </header>
@@ -34,7 +69,46 @@
 				<div class="content">
 					<div class="content__left-column">
 						<section class="slider">
-
+							<a href="#">
+								<div class="slider__slide active bleach">
+									<div class="slider__slide-text">
+										<h3 class="slider__slide-heading">BLEACH</h3>
+										<p class="slider__slide-description">
+											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, beatae.
+										</p>
+									</div>
+								</div>
+							</a>
+							<a href="#">
+								<div class="slider__slide one-piece">
+									<div class="slider__slide-text">
+										<h3 class="slider__slide-heading">one piece</h3>
+										<p class="slider__slide-description">
+											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, beatae.
+										</p>
+									</div>
+								</div>
+							</a>
+							<a href="#">
+								<div class="slider__slide kurokami">
+									<div class="slider__slide-text">
+										<h3 class="slider__slide-heading">kurokami</h3>
+										<p class="slider__slide-description">
+											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, beatae.
+										</p>
+									</div>
+								</div>
+							</a>
+							<a href="#">
+								<div class="slider__slide konosuba">
+									<div class="slider__slide-text">
+										<h3 class="slider__slide-heading">Kono Subarashii Sekai ni Shukufuku wo!</h3>
+										<p class="slider__slide-description">
+											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, beatae.
+										</p>
+									</div>
+								</div>
+							</a>
 						</section>
 						<section class="main__cards cards">
 							<div class="card">
@@ -173,24 +247,25 @@
 							<h2 class="profile__heading">проФиль</h2>
 							<div class="profile__flex-wrapper">
 								<div class="profile__left-column">
-									<img src="images/profile/001.png" alt="profile picture" class="profile__picture">
-									<ul class="profile__links">
-										<li class="profile__item">
-											<a href="#" class="profile__link">Мой профиль</a>
-										</li>
-										<li class="profile__item">
-											<a href="#" class="profile__link">Мои закладки (14)</a>
-										</li>
-										<li class="profile__item">
-											<a href="#" class="profile__link">Сообщения (2)</a>
-										</li>
-										<li class="profile__item">
-											<a href="#" class="profile__link">Личный статус</a>
-										</li>
-									</ul>
-									<button href="#" class="profile__exit">Разлогиниться</button>
+									<div class="flex-group">
+										<img src="images/profile/001.png" alt="profile picture" class="profile__picture">
+										<ul class="profile__links">
+											<li class="profile__item">
+												<a href="#" class="profile__link">Мой профиль</a>
+											</li>
+											<li class="profile__item">
+												<a href="#" class="profile__link">Мои закладки (4)</a>
+											</li>
+											<li class="profile__item">
+												<a href="#" class="profile__link">Сообщения (2)</a>
+											</li>
+											<li class="profile__item">
+												<a href="#" class="profile__link">Личный статус</a>
+											</li>
+										</ul>
+									</div>
+									<button href="#" class="profile__exit">Выйти</button>
 								</div>
-
 								<div class="profile__right-column">
 									<ul class="profile__admin-links">
 										<li class="profile__admin-item">
@@ -212,7 +287,7 @@
 											<a href="#" class="profile__admin-link">Сменить данные</a>
 										</li>
 									</ul>
-									<a href="#" class="profile__admin-panel">АдмиНпанель</a>
+									<button class="profile__admin-panel">АдмиНпанель</button>
 								</div>
 							</div>
 						</div>
@@ -250,6 +325,8 @@
 				</div>
 			</div>
 		</footer>
+
+
     <script src="js/main.min.js"></script>
 </body>
 </html>
