@@ -110,5 +110,19 @@ let launchPosts = function () {
 	clonePost();
 }
 
+let sendMessage = function (messageContent) {
+	function createMessage () {
+		let newMessage = document.createElement('div');
+		newMessage.classList.add('message');
+		newMessage.innerHTML = "<h1>abasdasd</h1>";
+	}
+}
+
+document.querySelector('.chat__send-message').onclick = function (e) {
+	e.preventDefault;
+	let inputValue = document.getElementById('send-message').value;
+	
+}
+
 sliderWork();
 launchPosts();

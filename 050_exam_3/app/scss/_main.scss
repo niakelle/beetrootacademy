@@ -114,6 +114,7 @@ b {
 	}
 }
 
+// бургер для адаптива
 .burger {
 	display: none;
 	width: 200px;
@@ -215,6 +216,7 @@ b {
 	transform: rotate(-45deg);
 }
 
+// инпут поиска
 .search {
 	background-color: #707070;
 	position: relative;
@@ -624,6 +626,7 @@ b {
 	}
 }
 
+// правый столбец
 .profile {
 	box-sizing: border-box;
 /* 	height: 410px; */
@@ -726,6 +729,85 @@ b {
 	}
 }
 
+.chat {
+	box-sizing: border-box;
+	background-color: $akcent__green;
+	border-radius: 5px;
+	padding: 5px 10px 10px 10px;
+	height: 350px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+
+	&.margin-top {
+		margin-top: 12px;
+	}
+	&__heading {
+		text-align: left;
+		text-transform: uppercase;
+		font-family: 'Roboto Condensed';
+		font-size: 28px;
+		color: rgba(255, 255, 255, 0.55);
+		letter-spacing: -2px;
+		margin-bottom: 15px;
+	}
+
+	&__form {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__input {
+		width: 165px;
+	}
+	&__send-message {
+		font-size: 12px;
+	}
+}
+
+.message {
+	box-sizing: border-box;
+	position: relative;
+	background-color: $left__container-bg;
+	border-radius: 3px;
+	padding: 5px;
+	margin-bottom: 10px;
+
+
+	&__nickname {
+		font-weight: bold;
+		text-decoration: underline;
+	}
+
+	&__text {
+		margin-top: 5px;
+		color: $heading__blue;
+	}
+
+	&__time {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		font-size: 12px;
+	}
+
+	&.your__message {
+		background-color: #D0E2E9;
+
+		&.message {
+			&__nickname {
+				color: #005F93;
+			}
+
+			&__text {
+				color: #717171;
+			}
+		}
+	}
+}
+
+
+// футер
 .footer {
 	margin-top: 200px;
 	color: white;
