@@ -855,7 +855,25 @@ b {
 	}
 }
 
+// последние посты на форуме
+.news {
+	box-sizing: border-box;
+	margin-top: 12px;
+	border-radius: 5px;
+	background-color: #F8F8F8;
+	padding: 10px;
 
+	&__heading {
+		display: block;
+    text-align: right;
+    text-transform: uppercase;
+    font-family: "Roboto Condensed";
+    font-size: 28px;
+    color: rgba(255,255,255,.55);
+    letter-spacing: -2px;
+    padding: 0 0 10px 0;
+	}
+}
 
 // футер
 
