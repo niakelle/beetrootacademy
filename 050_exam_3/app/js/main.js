@@ -173,3 +173,37 @@ sliderWork();
 
 // запускаем posts
 launchPosts();
+
+// пишу модальные окна
+/* const modal = document.querySelector('.card__modal');
+const cardContent = document.querySelector('.card__content');
+
+cardContent.onclick = function (e) {
+	e.preventDefault;
+	modal.style.display = 'block';
+}
+const modalClose = document.querySelector('.card__modal-close');
+modalClose.onclick = function () {
+	modal.style.display = 'none';
+} */
+
+
+function initModalCards () {
+	const modal = document.querySelectorAll('.card__modal');
+	const cardContent = document.querySelectorAll('.card__content');
+	const modalClose = document.querySelectorAll('.card__modal-close');
+
+	for (let i = 0; i < modal.length; i++) {
+		cardContent[i].onclick = function (e) {
+			e.preventDefault;
+			modal[i].style.display = 'block';
+		}
+
+		modalClose[i].onclick = function () {
+			modal[i].style.display = 'none';
+		}
+	}
+}
+
+initModalCards ();
+
