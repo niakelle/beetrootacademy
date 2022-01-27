@@ -1,49 +1,47 @@
 // функция, которая управляет слайдером
-let sliderWork = function () {
-	const slider = 	$(".slider");
-	let allSlides = $(".slider__slide");
-	let currentActive;
+function initSlider () {
+	let position = 0;
+	const slidesToShow = 1;
+	const slidesToScroll = 1;
+	const container = document.querySelector('.slider__container');
+	const track = document.querySelector('.slider__track');
+	const btnPrev = document.querySelector('.slider__btn-prev');
+	const btnNext = document.querySelector('.slider__btn-next');
+	const items = document.querySelectorAll('.slider__slide');
+	const itemsCount = items.length;
+	const itemWidth = container.clientWidth / slidesToShow;
+	const movePosition = slidesToScroll * itemWidth;
 
+	items.forEach((item) => {
+		item.style.minWidth = `${itemWidth}px`;
+	})
 
-	slider.append('<button class="slider__button slider__prev"> < </button>');
-	slider.prepend('<button class="slider__button slider__next"> > </button>');
+	btnNext.addEventListener('click', () => {
+		const itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
+		position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
 
-	const buttonPrev = 	$(".slider__prev");
-	const buttonNext = 	$(".slider__next");
-
-	function findCurrentActive () {
-		for (let i = 0; i < allSlides.length; i++) {
-			if (allSlides[i].classList.contains('active')) {
-				currentActive = i;
-			};
-		}
-	}
-
-	buttonPrev.on("click", function(){
-		findCurrentActive();
-		
-		allSlides[currentActive].classList.toggle('active');
-		if ((currentActive - 1) < 0) {
-			currentActive = (allSlides.length - 1);
-		} else {
-			currentActive -= 1;
-		}
-		allSlides[currentActive].classList.toggle('active');
+		setPosition();
+		checkBtns();
 	});
 
-	buttonNext.on("click", function(){
-		findCurrentActive();
+	btnPrev.addEventListener('click', () => {
+		const itemsLeft = Math.abs(position) / itemWidth;
+		position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
 
-		allSlides[currentActive].classList.toggle('active');
-		if ((currentActive + 1) >= allSlides.length) {
-			currentActive = 0;
-		} else {
-			currentActive += 1;
-		}
-		allSlides[currentActive].classList.toggle('active');
+		setPosition();
+		checkBtns();
 	});
 
-	
+	const setPosition = () => {
+		track.style.transform = `translateX(${position}px)`;
+	};
+
+	const checkBtns = () => {
+		btnPrev.disabled = position === 0;
+		btnNext.disabled = position <= -(itemsCount - slidesToShow) * itemWidth;
+	};
+
+	checkBtns();
 }
 
 // функция, которая управляет постами в теге .posts и переключением 
@@ -168,26 +166,7 @@ buttonSendMessage.onclick = function (e) {
 	updateScroll();
 }
 
-// запускаем слайдер
-sliderWork();
-
-// запускаем posts
-launchPosts();
-
 // пишу модальные окна
-/* const modal = document.querySelector('.card__modal');
-const cardContent = document.querySelector('.card__content');
-
-cardContent.onclick = function (e) {
-	e.preventDefault;
-	modal.style.display = 'block';
-}
-const modalClose = document.querySelector('.card__modal-close');
-modalClose.onclick = function () {
-	modal.style.display = 'none';
-} */
-
-
 function initModalCards () {
 	const modal = document.querySelectorAll('.card__modal');
 	const cardContent = document.querySelectorAll('.card__content');
@@ -205,5 +184,14 @@ function initModalCards () {
 	}
 }
 
+// запускаем слайдер
+initSlider();
+
+// запускаем posts
+launchPosts();
+
+// запускаем модальные окна для карточек
 initModalCards ();
+
+
 
